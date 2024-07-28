@@ -8,15 +8,13 @@
     #### Crossorigin attribute:
     ```The crossorigin attribute is a CORS (Cross-Origin Resource Sharing) setting that can be added to elements such as <img>, <video>, <audio>, <link>, <script>, and <style>. This attribute allows you to configure the CORS settings for those elements.```
 
-### Library vs Framework? 
-    #### Library:
-    ```Library is a collection of functions and methods that allows you to perform many actions without writing your code. 
-    bounded by less rules and guidelines.
-    isme kuch changes karne ki freedom hoti hai.```
+### Library vs Framework?
+    Library:
+    - Library is a collection of functions and methods that allows you to perform many actions without writing your code. 
+    - bounded by less rules and guidelines.
+    - isme kuch changes karne ki freedom hoti hai.
+    
     #### Framework:
-    ```Framework is a collection of libraries that helps you to perform many actions without writing your code.
-    bounded by more rules and guidelines.
-    isme kuch changes karne ki jyada freedom nahi hoti hai.```
-```Frameworks and libraries are both code written by someone else that helps you perform some common tasks in a less verbose way.
-A framework inverts the control of the program. It tells the developer what they need. A library doesn’t. The programmer calls the library where and when they need it.
-The degree of freedom a library or framework gives the developer will dictate how “opinionated” it is.```
+    - Framework is a collection of libraries that helps you to perform many actions without writing your code.
+    - bounded by more rules and guidelines.
+    - isme kuch changes karne ki jyada freedom nahi hoti hai.

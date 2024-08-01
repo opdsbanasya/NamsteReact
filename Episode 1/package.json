@@ -1,0 +1,23 @@
+{
+  "name": "episode-1",
+  "version": "1.0.0",
+  "description": "This Episode 2 ",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opdsbanasya/NamsteReact.git"
+  },
+  "keywords": [],
+  "author": "Dharm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/opdsbanasya/NamsteReact/issues"
+  },
+  "homepage": "https://github.com/opdsbanasya/NamsteReact#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}

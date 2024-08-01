@@ -27,4 +27,3 @@ The crossorigin attribute is a CORS (Cross-Origin Resource Sharing) setting that
 - isme kuch changes karne ki jyada freedom nahi hoti hai.
 
 ---
-[Dharm]

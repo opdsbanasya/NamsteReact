@@ -46,11 +46,12 @@ transitive dependencies are the dependencies of the dependencies of a project. F
 
 ### why not push node_modules to git?
 ```node_modules``` is a folder that contains all the dependencies of a project. It is very large in size. If you push node_modules to git, it will increase the size of the repository. It is not a good practice to push node_modules to git. 
-If you have ```package.json``` and ```package-lock.json``` file, you can recreate node_modules on any machine by the following command:
+If you have `package.json` and `package-lock.json`file, you can recreate node_modules on any machine by the following command:
 ```terminal
 npm install
 ```
 
-React Apps are fast but when we build large scale apps, we need lot more things instead of React. React is not only that making apps fast like bundler. 
+- React Apps are fast but when we build large scale apps, we need lot more things instead of React. React is not only that making apps fast like bundler. 
 
-BrowserList
+### BrowserList
+BrowserList is a configuration file that is used to specify the browser support of a project. It is used by the bundlers to compile the code according to the browser support.

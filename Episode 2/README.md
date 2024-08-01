@@ -51,3 +51,6 @@ If you have ```package.json``` and ```package-lock.json``` file, you can recreat
 npm install
 ```
 
+React Apps are fast but when we build large scale apps, we need lot more things instead of React. React is not only that making apps fast like bundler. 
+
+BrowserList

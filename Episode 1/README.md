@@ -14,7 +14,7 @@ here are React CDN links:
 ```
 
 ### Crossorigin attribute:
-The crossorigin attribute is a CORS (Cross-Origin Resource Sharing) setting that can be added to elements such as ```<img>```, ```<video>```, ```<audio>```, ```<link>```, ```<script>```, and ```<style>```. This attribute allows you to ```configure``` the CORS settings for those elements.
+The crossorigin attribute is a CORS (Cross-Origin Resource Sharing) setting that can be added to elements such as `<img>`, `<video>`, `<audio>`, `<link>`, `<script>`, and `<style>`. This attribute allows you to `configure` the CORS settings for those elements.
 
 ### Library:
 - Library is a collection of functions and methods that allows you to perform many actions without writing your code.

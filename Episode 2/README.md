@@ -1,7 +1,7 @@
 ### npm 
 npm is package manager for JavaScript. It is used to intall and manage dependencies for a project.
 ### npm init 
-```npm init``` is used to create a package.json file. It will ask you some questions and then create a package.json file. if you want to skip the questions you can use ```npm init -y```
+`npm init` is used to create a package.json file. It will ask you some questions and then create a package.json file. if you want to skip the questions you can use `npm init -y`
 ```terminal
 npm init
 npm init -y
@@ -31,9 +31,9 @@ here ^ caret means that the version of parcel should be greater than 2.12.0
 
 ### caret vs tilde
 #### caret
-```^2.12.0``` means that the version of parcel should be greater than 2.12.0 but less than 3.0.0
+`^2.12.0` means that the version of parcel should be greater than 2.12.0 but less than 3.0.0
 #### tilde
-```~2.12.0``` means that the version of parcel should be greater than 2.12.0 but less than 2.13.0
+`~2.12.0` means that the version of parcel should be greater than 2.12.0 but less than 2.13.0
 
 ### package-lock.json
 package-lock.json is a file that keeps track of the exact version of the dependencies of a project. It is used to make sure that the same version of dependencies is installed on all the machines.
@@ -45,7 +45,7 @@ node_modules is a folder that contains all the dependencies of a project. It is 
 transitive dependencies are the dependencies of the dependencies of a project. For example, if you install parcel, parcel will install some other dependencies. These dependencies are called transitive dependencies.
 
 ### why not push node_modules to git?
-```node_modules``` is a folder that contains all the dependencies of a project. It is very large in size. If you push node_modules to git, it will increase the size of the repository. It is not a good practice to push node_modules to git. 
+`node_modules` is a folder that contains all the dependencies of a project. It is very large in size. If you push node_modules to git, it will increase the size of the repository. It is not a good practice to push node_modules to git. 
 If you have `package.json` and `package-lock.json`file, you can recreate node_modules on any machine by the following command:
 ```terminal
 npm install

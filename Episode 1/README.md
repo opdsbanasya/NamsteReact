@@ -8,7 +8,7 @@ React is used to build user interfaces (UI) on the front end. React is a `JavaSc
 
 here are React CDN links:
 
-````html
+```html
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 ```

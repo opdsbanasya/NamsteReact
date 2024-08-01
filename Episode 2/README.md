@@ -2,9 +2,9 @@
 npm is package manager for JavaScript. It is used to intall and manage dependencies for a project.
 ### npm init 
 ```npm init``` is used to create a package.json file. It will ask you some questions and then create a package.json file. if you want to skip the questions you can use ```npm init -y``
-```terminal
-    npm init
-    npm init -y
+```npm
+npm init
+npm init -y
 ```
 #### package.json
 #### devDependencies

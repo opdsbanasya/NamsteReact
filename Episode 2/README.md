@@ -22,6 +22,20 @@ npm install -D parcel
 ```
 here -D mean dev depencies
 
+#### parcel give lot of features 
+- Dev Build & Production Build
+- Local Server - HTTP & HTTPs
+- Hot Module Replacement
+- File Watching Algorithm - written in c++
+- Code Splitting
+- Tree Shaking - remove unused code
+- Image Optimization
+- CSS & JS Minification
+- Differential bundling
+- Diagnostic Messages
+and lot more...
+
+
 ``` Json
 "devDependencies": {
     "parcel": "^2.12.0"
@@ -55,3 +69,9 @@ npm install
 
 ### BrowserList
 BrowserList is a configuration file that is used to specify the browser support of a project. It is used by the bundlers to compile the code according to the browser support.
+
+```Json
+"Browserlist":[
+    "last 2 versions"
+]
+```

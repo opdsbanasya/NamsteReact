@@ -25,4 +25,6 @@ The crossorigin attribute is a CORS (Cross-Origin Resource Sharing) setting that
 - Framework is a collection of libraries that helps you to perform many actions without writing your code.
 - bounded by more rules and guidelines.
 - isme kuch changes karne ki jyada freedom nahi hoti hai.
-````
+
+---
+[Dharm]

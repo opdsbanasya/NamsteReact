@@ -53,5 +53,5 @@ JSX code -> Babel -> React Element - JS Object -> HTML(render)
 
 `Component composition` : Nesting components inside other components.
 
-### cross-side scripting
-Some APIs are sending some malicious code into your browser, the browser will execute that blindly, but React sanitize the code before rendering it to the browser.
+### Cross-side-scripting Attacks
+Some APIs are sending some malicious code into your browser, the browser will execute that blindly, it knows as `Cross-side-scripting Attack`. React sanitize the code before rendering it to the browser.

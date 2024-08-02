@@ -1,10 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const heading = React.createElement("h1", {}, "Namaste React");
+// const Heading = <h1 className="heading">Namaste React with JSX</h1>
 
-const jsxHeading = <h1>Namaste React with JSX</h1>
+const Title = ()=>{
+    return <h1>This is title</h1>
+}
+
+const HeadingComponent = ()=>{
+    return <div>
+        <Title/>
+        <h2>Namste React With Functional Component</h2>
+    </div>
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(jsxHeading);
+root.render(<HeadingComponent />);
+

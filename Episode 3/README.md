@@ -41,9 +41,13 @@ JSX code -> Babel -> React Element - JS Object -> HTML(render)
         <div>
             <HeadingComponent />
             <HeadingComponent></HeadingComponent>
-            // can call like as normal function
+        </div>
+        // you can call as a normal function
+        <div>
             {HeadingComponent()}
         </div>
+
+        
         ```
         - `{}` : You can write any expression of JS.
 

@@ -16,22 +16,38 @@ The jsx code transpiled before reached to browser and it is done by `babel` than
 JSX code -> Babel -> React Element - JS Object -> HTML(render)
 ```
 
-"Babel": is a JavaScript compiler that converts the JSX code to JavaScript code.
+`Babel`: is a JavaScript compiler that converts the JSX code to JavaScript code. explore Babel Documentation [Babel](https://babeljs.io/docs/en/) to more.
 
 
+### React Components
+- React components are the building blocks of any React application.
+- A React component is a reusable piece of code that defines how a part of the UI should appear.
+- There are two types of components in React:
+    - `Class components` : Old way of writing components.
+    - `Functional components` : New way of writing components.
+        - Functional components are just JavaScript functions that return React elements.
+        - Make sure to start the name of the component with a capital letter.
+        ```JSX
+        const HeadingComponent = () => {
+            return <h1>React Functional Component</h1>
+        }
+        ```
+        - To render these functional components, use following syntax:
+        ```JSX
+        // to render on root element
+        <HeadingComponent />
 
-explore Babel Documentation
+        // to render inside another component
+        <div>
+            <HeadingComponent />
+            <HeadingComponent></HeadingComponent>
+            // can call like as normal function
+            {HeadingComponent()}
+        </div>
+        ```
+        - `{}` : You can write any expression of JS.
 
-React Components
-class based components 
-functional components
+`Component composition` : Nesting components inside other components.
 
-to render components - 
-```JSX
-<ComponentName>
-```
-
-component composition
-{ComponentName()}
-
-cross-side scripting
+### cross-side scripting
+Some APIs are sending some malicious code into your browser, the browser will execute that blindly, but React sanitize the code before rendering it to the browser.

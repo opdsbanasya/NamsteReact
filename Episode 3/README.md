@@ -16,7 +16,7 @@ The jsx code transpiled before reached to browser and it is done by `babel` than
 JSX code -> Babel -> React Element - JS Object -> HTML(render)
 ```
 
-Babel is a JavaScript compiler that converts the JSX code to JavaScript code.
+"Babel": is a JavaScript compiler that converts the JSX code to JavaScript code.
 
 
 

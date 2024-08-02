@@ -6,10 +6,13 @@ import ReactDOM from "react-dom";
 const Title = ()=>{
     return <h1>This is title</h1>
 }
-
+const title2 =( 
+    <h1>This is title 2</h1>
+)
 const HeadingComponent = ()=>{
     return <div>
         <Title/>
+        {title2}
         <h2>Namste React With Functional Component</h2>
     </div>
 }

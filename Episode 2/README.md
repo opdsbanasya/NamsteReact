@@ -75,3 +75,12 @@ BrowserList is a configuration file that is used to specify the browser support 
     "last 2 versions"
 ]
 ```
+
+### Configuring scripts in package.json
+You can configure scripts in package.json file. You can run the scripts using npm.
+```Json
+"scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+}
+```

@@ -1,4 +1,4 @@
-adding script in package.json
+
 JSX
 
 the jsx code transpiled before reached to browser and it is done by parcel and parcel depend on babel than at the end the babel transpile the jsx code to js code that the browser can understand.
@@ -15,3 +15,6 @@ to render components -
 ```
 
 component composition
+{ComponentName()}
+
+cross-side scripting

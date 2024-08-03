@@ -50,3 +50,43 @@ header nav ul li{
     font-weight: 500;
     cursor: pointer;
 }
+#body{
+    padding: 1vw;
+}
+#search{
+    width: 30vw;
+    height: 10vh;
+    background: lightblue;
+    padding: 1vw;
+    font-size: 1.6vw;
+    display: grid;
+    place-items: center;
+    margin-left: 3.6vw;
+}
+#res-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3vw;
+    margin-top: 2vw;
+}
+.res-card{
+    width: 18%;
+    height: 50vh;
+    cursor: pointer;
+}
+.res-card:hover{
+    border:2px solid rgba(0, 0, 0, 0.2);
+}
+
+.res-logo{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+.res-info{
+    padding: 0 1vw;
+}

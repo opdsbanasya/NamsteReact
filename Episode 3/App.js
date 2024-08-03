@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Header from "./Header";
 
 // const Heading = <h1 className="heading">Namaste React with JSX</h1>
 
@@ -11,6 +12,7 @@ const title2 =(
 )
 const HeadingComponent = ()=>{
     return <div>
+        <Header />
         <Title/>
         {title2}
         <h2>Namste React With Functional Component</h2>

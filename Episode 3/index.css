@@ -1,5 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
 #heading{
     color:blueviolet;
     font-size: 20px;
     font-weight: 500;
+}
+#header{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1vw 0;
+    background: lightgreen;
+    gap: 5vw;
+}
+#header h1{
+    font-size: 3vw;
+    color: rgb(92, 43, 226);
+}
+#header img{
+    width: 2vw;
+    height: 2vw;
+    object-fit: cover;
+}
+#header input{
+    width: 20%;
+    height: 80%;
+    padding: 1vw;
+    border: none;
+    border-radius: 2vw;
 }

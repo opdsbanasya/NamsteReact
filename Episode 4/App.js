@@ -36,6 +36,14 @@ const Body = () => {
         <div id="search">Search</div>
         <div id="res-container">
             <RestruatantCard />
+            <RestruatantCard />
+            <RestruatantCard />
+            <RestruatantCard />
+            <RestruatantCard />
+            <RestruatantCard />
+            <RestruatantCard />
+            <RestruatantCard />
+            <RestruatantCard />
         </div>
     </div>
 }

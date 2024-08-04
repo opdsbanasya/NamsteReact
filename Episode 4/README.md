@@ -45,11 +45,11 @@ In this Episode, I was using the data from `Swiggy API` to display the restraure
 *Ans* : `JSX` is an Extension Syntax that allows writing HTML and Javascript together easily in React and is used to create React elements. These elements are then rendered to the React DOM. Each JSX element is just to make use of React easy and for calling React.createElement(component, props, …children) with less work. So, anything that is done with JSX can also be done with just plain JavaScript. So `JSX` is not mandatory but is used for writing better and clean code instead of writing code using `React.CreateElement`.
 
 ### Is `ES6` mandatory for React?
-*Ans*: `ES6` is not mandatory for `React` but is highly recommendable. The latest projects created on React rely a lot on ES6. React uses ES6, and you should be familiar with some of the new features like: Classes, Arrow Functions, Variables(let, const).
+`ES6` is not mandatory for `React` but is highly recommendable. The latest projects created on React rely a lot on ES6. React uses ES6, and you should be familiar with some of the new features like: Classes, Arrow Functions, Variables(let, const).
 ES6 stands for ECMAScript 6. ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015.
 
 ### `{TitleComponent}` vs `{<TitleComponent/>}` vs `{<TitleComponent></TitleComponent>}` in `JSX`.
-*Ans*: The Difference is stated below:
+The Difference is stated below:
 - `{TitleComponent}`: This value describes the `TitleComponent` as a javascript expression or a variable or React element.
   The `{}` can embed a javascript expression or a variable or React element inside it.
 - `<TitleComponent/>` : This value represents a Component that is basically returning Some JSX value. In simple terms `TitleComponent` a function that is returning a JSX value. If component is written inside the `{<  />}` expression.
@@ -64,11 +64,11 @@ ES6 stands for ECMAScript 6. ECMAScript was created to standardize JavaScript, a
 ```
 
 ### How can I write `comments` in JSX?
-*Ans*: JSX comments are written as follows:
+JSX comments are written as follows:
 - `{/*  */}` - for single or multiline comments
 
 ### What is `<React.Fragment></React.Fragment>` and `<></>`?
-*Ans*: `<React.Fragment></React.Fragment>` is a feature in React that allows us to write code in multple lines and return them. `<></>` is a shorthand for `React.Fragment`.
+`<React.Fragment></React.Fragment>` is a feature in React that allows us to write code in multple lines and return them. `<></>` is a shorthand for `React.Fragment`.
 
 ### How can I write `comments` in JSX?
 JSX comments are written as follows:

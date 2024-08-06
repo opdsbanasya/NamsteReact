@@ -1,6 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom";
-
 const resData = [
     {
     "info": {
@@ -2227,66 +2224,4 @@ const resData = [
     }
   }]
 
-const Header = () => {
-    return <header>
-        <div id="logo-container">
-            <img id="logo" src="https://imgs.search.brave.com/hkG-MNTaxFwfJGO7_WouUVHTfPzCYqLO1xWUnzur-_w/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtcGxhdGZvcm0u/OTlzdGF0aWMuY29t/Ly9zXy0ycWdSclBa/bldVcFdJaDROZUl1/OTVVQ0U9LzB4MDo5/OTl4OTk5L2ZpdC1p/bi81MDB4NTAwLzk5/ZGVzaWducy1jb250/ZXN0cy1hdHRhY2ht/ZW50cy8xMTgvMTE4/NjEyL2F0dGFjaG1l/bnRfMTE4NjEyOTQz.jpeg" />
-        </div>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Contact Us</li>
-                <li>Cart</li>
-            </ul>
-        </nav>
-    </header>
-}
-
-const RestruatantCard = (prop) => {
-    const {resCardInfo} = prop;
-
-    const {name, cuisines, avgRatingString, sla, locality, costForTwo, cloudinaryImageId} = resCardInfo?.info;
-
-    
-    
-    const handleCuisinesLength = () => {
-        for(let i in cuisines){
-            console.log(cuisines[0])
-        }
-    }
-    handleCuisinesLength();
-    return <div className="res-card">
-        <img alt="res-logo" className="res-logo" src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`} />
-        <div className="res-info">
-            <h4>{name}</h4>
-            <h5>{cuisines[0]}</h5>
-            <h6>{avgRatingString} star • {sla.slaString}</h6>
-            <h6>{costForTwo}</h6>
-            <h6>{locality}</h6>
-        </div>
-    </div>
-}
-
-const Body = () => {
-    return <div id="body">
-        <div id="search">Search</div>
-        <div id="res-container">
-            {resData.map(resuarant => (
-                <RestruatantCard resCardInfo={resuarant} />
-            ))}
-        </div>
-    </div>
-}
-const AppLay = () => {
-    return <>
-        <Header />
-        <Body />
-    </>
-}
-
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLay />);
-
+export default resData;

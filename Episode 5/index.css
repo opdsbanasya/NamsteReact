@@ -54,15 +54,14 @@ header nav ul li{
     margin-top: 1vw;
     margin-left: 5vw;
 }
-#search{
+#top-rated{
     width: 30vw;
     height: 10vh;
-    background: lightblue;
     padding: 1vw;
     font-size: 1.6vw;
-    display: grid;
-    place-items: center;
-    
+}
+#top-rated button{
+    padding: 0.5vw 1vw;
 }
 #res-container{
     width: 100%;

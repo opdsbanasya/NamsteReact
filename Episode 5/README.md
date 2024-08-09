@@ -14,7 +14,7 @@ You can use the following file structure for your React project:
 ``` 
 
 ## 2 type of export/import
-- *default export/import* : you can only have `one default export` in a file. if you want to import a single function, class, or variable, you can use default export/import.
+- **default export/import** : you can only have `one default export` in a file. if you want to import a single function, class, or variable, you can use default export/import.
 syntax:
 ```JavaScript
 const myFunction = () => {
@@ -26,7 +26,7 @@ export default myFunction;
 ```JavaScript
 import myFunction from './myFunction';
 ```
-- *named export/import*: you can have multiple named exports in a file. if you want to import multiple functions, classes, or variables, you can use named `export`/`import`. JS wrap your data in an `object` and you can access it using the object name.
+- **named export/import**: you can have multiple named exports in a file. if you want to import multiple functions, classes, or variables, you can use named `export`/`import`. JS wrap your data in an `object` and you can access it using the object name.
 syntax:
 ```JavaScript
 export const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
@@ -44,7 +44,7 @@ import { CDN_URL, LOGO_URL } from './Constants';
 - It is a normal JavaScript function.
 - It allows you to use state and other React features without writing a class.
 
-some hooks:
+**some hooks**:
 ### useState
 - Super power `state variable` in functional component.
 - You have to import it from 'react'.

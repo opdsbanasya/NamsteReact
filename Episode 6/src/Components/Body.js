@@ -1,6 +1,7 @@
 import RestruatantCard from "./RestruatantCard";
 import resData from "../utils/mockData";
 import { useEffect, useState } from 'react';
+import Shimmer from "./Shimmer";
 
 const Body = () => {
 
@@ -11,8 +12,8 @@ const Body = () => {
     },[])
 
     const fetchData = async ()=>{
-        const api = "https://www.swiggy.com/mapi/homepage/getCards?lat=26.9124336&lng=75.7872709"
-        const data = await fetch(api);
+        
+        const data = await fetch("json?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants");
 
         const json = await data.json();
 
@@ -22,6 +23,9 @@ const Body = () => {
         
     }
 
+    if(restaurant.length === 0){
+        return <Shimmer />
+    }
     return <div id="body">
         <div id="top-rated">
             <button onClick={() => {

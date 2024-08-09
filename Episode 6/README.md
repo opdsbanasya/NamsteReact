@@ -48,3 +48,10 @@ Rendering by a condition is called conditional rendering.
 
 ## React will be render whole component. How react update constant variable in useState?
 React render a whole a component and if you update a state, react rerender the component and re-initialize the state variable and assign new value. That's why react update the constant variable in useState.
+
+---
+
+## what in this Episode
+In this Episode I learned about `Monolith` and `Microservice architecture`. I also learned about `useEffect`, `CORS`, `Shimmer UI`, `Conditional rendering` and `how react update constant variable in useState`.
+
+Also, built a `shimmer UI` for the loading state of the app and built `search functionality` in out food app, 

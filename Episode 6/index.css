@@ -50,6 +50,12 @@ header nav ul li{
     font-weight: 500;
     cursor: pointer;
 }
+.login{
+    width: 6vw;
+    padding: 0.2vw;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+}
 #body{
     margin-top: 1vw;
     margin-left: 5vw;

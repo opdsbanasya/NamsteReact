@@ -13,7 +13,7 @@ const Body = () => {
 
     const fetchData = async ()=>{
         
-        const data = await fetch("json?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants");
+        const data = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=26.9124336&lng=75.7872709");
 
         const json = await data.json();
 
@@ -23,6 +23,7 @@ const Body = () => {
         
     }
 
+    // conditional rendering
     if(restaurant.length === 0){
         return <Shimmer />
     }

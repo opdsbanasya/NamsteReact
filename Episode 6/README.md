@@ -10,3 +10,6 @@ CORS
 CORS allow extension
 
 Shimmer Ui
+conditional rendering
+React will be render whole component
+How react update constant variable in useState

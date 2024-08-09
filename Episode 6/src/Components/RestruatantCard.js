@@ -4,12 +4,7 @@ const RestruatantCard = (prop) => {
 
     const { name, cuisines, avgRatingString, sla, locality, costForTwo, cloudinaryImageId } = resCardInfo?.info;
 
-    const handleCuisinesLength = () => {
-        for (let i in cuisines) {
-            console.log(cuisines[0])
-        }
-    }
-    handleCuisinesLength();
+
     return <div className="res-card">
         <img alt="res-logo" className="res-logo" src={CDN_URL + cloudinaryImageId} />
         <div className="res-info">

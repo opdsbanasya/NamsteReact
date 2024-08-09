@@ -43,7 +43,7 @@ It is a dummy UI that is shown to the user until the actual data is loaded.
 ## Conditional rendering
 Rendering by a condition is called conditional rendering.
 ```JavaScript
-{`condition` && <Component />}
+{condition && <Component />}
 ```
 
 ## React will be render whole component. How react update constant variable in useState?

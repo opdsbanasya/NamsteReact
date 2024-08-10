@@ -5,14 +5,14 @@ import Shimmer from "./Shimmer";
 
 const Body = () => {
 
-    const [restaurant, setRestaurant] = useState(resData);
+    const [restaurant, setRestaurant] = useState([]);
     const [filterRestaurent, setFilterRestaurent] = useState([])
 
     const [searchData, setSearchData] = useState("");
 
     useEffect(() => {
         fetchData();
-        setFilterRestaurent(resData)
+        setFilterRestaurent(restaurant)
     }, [])
 
     const fetchData = async () => {

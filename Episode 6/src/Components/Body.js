@@ -20,12 +20,12 @@ const Body = () => {
 
         const json = await data.json();
 
-        
-        console.log(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 
         setFilterRestaurent(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
+
+    
 
     // conditional rendering
     return <div id="body">
@@ -59,9 +59,11 @@ const Body = () => {
                 <RestruatantCard key={resuarant?.info?.id} resCardInfo={resuarant} />
             ))}
         </div>}
-        <div className="show-more">
+        {filterRestaurent.length !== 0 && (<div className="show-more">
             <button>Show More</button>
         </div>
+        )}
+
     </div>
 }
 

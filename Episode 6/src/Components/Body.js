@@ -1,5 +1,4 @@
 import RestruatantCard from "./RestruatantCard";
-import resData from "../utils/mockData";
 import { useEffect, useState } from 'react';
 import Shimmer from "./Shimmer";
 
@@ -51,7 +50,7 @@ const Body = () => {
                 >Search</button>
             </div>
             <button onClick={() => {
-                const filterRestaurent = restaurant.filter(res => res.info.avgRating > 4.1);
+                const filterRestaurent = restaurant.filter(res => res.info.avgRating > 4.4);
                 setFilterRestaurent(filterRestaurent);
             }}>Top Rated Restaurants</button>
         </div>
@@ -60,6 +59,9 @@ const Body = () => {
                 <RestruatantCard key={resuarant?.info?.id} resCardInfo={resuarant} />
             ))}
         </div>}
+        <div className="show-more">
+            <button>Show More</button>
+        </div>
     </div>
 }
 

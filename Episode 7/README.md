@@ -15,3 +15,7 @@ syntax
 ## RouterProvider
 - It is a component that provided by react-router-dom.
 - It is used to provide the router to the application.
+
+## childrenRoutes
+
+## Outlet

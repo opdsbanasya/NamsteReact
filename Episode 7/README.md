@@ -19,3 +19,5 @@ syntax
 ## childrenRoutes
 
 ## Outlet
+
+## useParam

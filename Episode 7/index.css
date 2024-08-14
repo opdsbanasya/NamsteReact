@@ -13,6 +13,9 @@ a{
     text-decoration: none;
     color: black;
 }
+li{
+    list-style: none;
+}
 header{
     width: 100%;
     height: 12vh;
@@ -136,4 +139,49 @@ header nav ul li{
 }
 .show-more button{
     padding: 0.5vw 1vw;
+}
+.res-menu{
+    width: 100%;
+    height: 100%;
+    padding: 0.5vw 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.res-menu>h2{
+    font-size: 2vw;
+    font-weight: 600;
+    text-align: left;
+    width: 70%;
+    margin-bottom: 1vw;
+}
+.res-menu-about{
+    width: 70%;
+    height: 10%;
+    background: rgb(228, 228, 228);
+    padding: 2vw 4vw;
+    border-radius: 1vw;
+}
+.res-menu-about>p{
+    display: flex;
+    gap: 0.5vw;
+    align-items: center;
+}
+.delivery-time{
+    font-size: 1vw;
+    margin-top: 0.8vw;
+}
+.starIcon{
+    color: #f1c40f;
+    font-size: 2vw;
+    line-height: 1.5vw;
+}
+.menu{
+    width: 70%;
+    padding: 2vw 0;
+}
+.menu>h3{
+    font-size: 1.8vw;
+    margin-bottom: 1vw;
 }

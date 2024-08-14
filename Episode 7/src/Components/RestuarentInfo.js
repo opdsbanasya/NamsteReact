@@ -23,16 +23,20 @@ const RestuarentInfo = ()=>{
     }
 
     if(resInfo === null) return <Shimmer />
-    const {name, avgRating, costForTwoMessage, cuisines} = resInfo?.data?.cards[2]?.card?.card?.info;
+    const {name, avgRating, costForTwoMessage, cuisines, sla, areaName
+    } = resInfo?.data?.cards[2]?.card?.card?.info;
 
     const { itemCards} = resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
 
 
-    return <div>
-        <h1>{name}</h1>
-        <div>
-            <p>{avgRating} - {costForTwoMessage}</p>
-            <p>{cuisines.join(", ")}</p>
+    return <div className="res-menu">
+        <h2>{name}</h2>
+        <div className="res-menu-about">
+            <section className="res-menu-about-left">
+                <p><span className="starIcon">★</span>{avgRating} • {costForTwoMessage}</p>
+                <p>{cuisines.join(", ")}</p>
+                <p className="delivery-time">{sla?.slaString} • {areaName} • {sla?.lastMileTravelString}</p>
+            </section>
         </div>
         <div className="menu">
             <h3>Menu Items</h3>

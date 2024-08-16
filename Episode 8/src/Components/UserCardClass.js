@@ -1,29 +1,41 @@
 import React from 'react';
 
 class UserCardClass extends React.Component{
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
 
         this.state = {
-            status: "active"
+            status: "active",
+            userInfo: {}
         }
-        console.log(this.props.name + "Child constructor called");
+        // console.log(this.props.name + "Child constructor called");
     }
 
-    componentDidMount(){
-        console.log(this.props.name + "Child DidMount called");
+    async componentDidMount(){
+        // console.log(this.props.name + "Child DidMount called");
 
+        const data = await fetch('https://api.github.com/users/dharm-2245832');
+
+        const json = await data.json();
+
+        console.log(json);
+        this.setState({
+            userInfo: json,
+        })
+        
     }
 
     render(){
-        console.log(this.props.name + "child render called");
-
-        const {name, city} = this.props;
+        
         const {status} = this.state;
+
+        const {name, location, avatar_url} = this.state.userInfo;
+
         return (
             <div className='user-card'>
-                <h2>Name: {name} class <span className="user-status">{status}</span></h2>
-                <h3>City: {city}</h3>
+                <img className='user-avatar' src={avatar_url} />
+                <h2>{name} <span className="user-status">{status}</span></h2>
+                <h3>{location}</h3>
                 <h3>Twitter: @opdsbanasya</h3>
                 <button onClick={()=>{
                     this.setState({

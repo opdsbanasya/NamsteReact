@@ -204,3 +204,6 @@ header nav ul li{
 .user-status-change{
     padding: 0.5vw 1vw;
 }
+.user-avatar{
+    width: 10vw;
+}

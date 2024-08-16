@@ -185,3 +185,15 @@ header nav ul li{
     font-size: 1.8vw;
     margin-bottom: 1vw;
 }
+.user-card{
+    width: 40%;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    margin-left: 10vw;
+    margin-top: 2vw;
+    padding: 2vw;
+    display: grid;
+    place-items: center;
+    border-radius: 1vw;
+    gap: 0.8vw;
+    background: lightyellow;
+}

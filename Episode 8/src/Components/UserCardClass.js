@@ -16,6 +16,11 @@ class UserCardClass extends React.Component{
                 <h2>Name: {name} class <span className="user-status">{status}</span></h2>
                 <h3>City: {city}</h3>
                 <h3>Twitter: @opdsbanasya</h3>
+                <button onClick={()=>{
+                    this.setState({
+                        status : status == "active" ? "in-active": "active"
+                    })
+                }} className='user-status-change'>change status</button>
             </div>
         )
     }

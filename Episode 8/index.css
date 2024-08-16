@@ -197,3 +197,9 @@ header nav ul li{
     gap: 0.8vw;
     background: lightyellow;
 }
+.user-status{
+    font-size: 0.8vw;
+    background: lightblue;
+    padding: 0.2vw 0.5vw;
+    border-radius: 1vw;
+}

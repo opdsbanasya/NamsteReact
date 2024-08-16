@@ -7,8 +7,17 @@ class UserCardClass extends React.Component{
         this.state = {
             status: "active"
         }
+        console.log(this.props.name + "Child constructor called");
     }
+
+    componentDidMount(){
+        console.log(this.props.name + "Child DidMount called");
+
+    }
+
     render(){
+        console.log(this.props.name + "child render called");
+
         const {name, city} = this.props;
         const {status} = this.state;
         return (

@@ -4,8 +4,6 @@ import UserCardClass from "./UserCardClass";
 class About extends Component{
     constructor(){
         super();
-
-        // console.log("Parent Constructor called");
         
     }
 
@@ -13,8 +11,11 @@ class About extends Component{
         // console.log("Parent DidMount called");
     }
 
+    componentWillUnmount(){
+        console.log("Unmounted");
+    }
+
     render(){
-        // console.log("Parent render called");
 
         return (
             <div>

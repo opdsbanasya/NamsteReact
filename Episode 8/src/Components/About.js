@@ -4,15 +4,16 @@ import UserCardClass from "./UserCardClass";
 class About extends Component{
     constructor(){
         super();
-        
     }
 
     componentDidMount(){
-        // console.log("Parent DidMount called");
+        this.timer = setInterval(()=>{
+            console.log("Hello there are on Episode 8");
+        }, 2000)
     }
 
     componentWillUnmount(){
-        console.log("Unmounted");
+        clearInterval(this.timer);
     }
 
     render(){

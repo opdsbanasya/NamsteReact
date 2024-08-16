@@ -6,13 +6,11 @@ class UserCardClass extends React.Component{
 
         this.state = {
             status: "active",
-            userInfo: {}
+            userInfo: {}    
         }
-        // console.log(this.props.name + "Child constructor called");
     }
 
     async componentDidMount(){
-        // console.log(this.props.name + "Child DidMount called");
 
         const data = await fetch('https://api.github.com/users/dharm-2245832');
 
@@ -22,6 +20,10 @@ class UserCardClass extends React.Component{
         this.setState({
             userInfo: json,
         })
+        
+    }
+
+    componentDidUpdate(){
         
     }
 

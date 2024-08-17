@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { API_URL } from "./constant";
 
-const useRestaurentMenu = (resId) =>{
+const useRestaurentMenu = (id) =>{
 
-    const {id} = resId;
-    
     const [resInfo, setResInfo] = useState(null);
 
 
@@ -16,7 +14,7 @@ const useRestaurentMenu = (resId) =>{
         const data = await fetch(API_URL + id);
 
         const json = await data.json();
-
+        
         setResInfo(json)
     }
     

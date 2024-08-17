@@ -5,14 +5,14 @@ import useRestaurentMenu from "../utils/useRestaurentMenu";
 const RestuarentInfo = () => {
 
     const {id} = useParams();
+    
+    const resMenuInfo = useRestaurentMenu(id);
 
-    const resInfo = useRestaurentMenu(id);
-
-    if(resInfo === null) return <Shimmer />
+    if(resMenuInfo === null) return <Shimmer />
     const {name, avgRating, costForTwoMessage, cuisines, sla, areaName
-    } = resInfo?.data?.cards[2]?.card?.card?.info;
+    } = resMenuInfo?.data?.cards[2]?.card?.card?.info;
 
-    const { itemCards} = resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+    const { itemCards} = resMenuInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
 
 
     return <div className="res-menu">

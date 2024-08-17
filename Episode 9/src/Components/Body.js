@@ -3,31 +3,22 @@ import { useEffect, useState } from 'react';
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-
+import useResData from "../utils/useResData";
+import { RES_LIST_API } from "../utils/constant";
 const Body = () => {
 
-    const [restaurant, setRestaurant] = useState([]);
+    // const [restaurant, setRestaurant] = useState([]);
     const [filterRestaurent, setFilterRestaurent] = useState([])
 
     const [searchData, setSearchData] = useState("");
 
     const userStatus = useOnlineStatus();
 
+    const restaurant = useResData(RES_LIST_API);
+
     useEffect(() => {
-        fetchData();
         setFilterRestaurent(restaurant)
-    }, [])
-
-    const fetchData = async () => {
-
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.9124336&lng=75.7872709&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-
-        const json = await data.json();
-
-        setRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-
-        setFilterRestaurent(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-    }
+    }, [restaurant])
 
     if(userStatus === false) return ( userStatus === false && <h1>You are offline!! <br /> Connect to Internet!!!</h1>)
     // conditional rendering

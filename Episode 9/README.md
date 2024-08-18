@@ -1,15 +1,15 @@
 # Optimising our App
 ## Single Responsibility Principle
 - _A single entity takes single responsibility._
-- For example, ResMEnu is a component that has a single job to display the menu of restaurants.
-- This is a good way to maintain the code in mosular passion, means breakdown the code into small modules.
-- When we apply test cases, it will be easy to test the code, or easy to catch the bug.
+- For example, `ResMenu` is a component that has a single job to display the menu of restaurants.
+- This is a good way to `maintain` the code in modular passion, means breakdown the code into small modules.
+- When we apply test cases, it will be easy to test the code, or `easy to catch the bug`.
 - _SRP_ makes code reusable, testable, and maintainable.
 
 ## Custom Hooks
-- Hooks are just a utility function that can be used to share logic between components.
+- Hooks are just a `utility function` that can be used to share logic between components.
 - We can create our own hooks.
-- When you creating a hook, you should start the name of the hook with 'use'. It in not mandatory but it is a convention. If you don't start the name with 'use', then React will not be able to identify it as a hook or linter will give you a warning if you are using eslint.
+- When you creating a hook, you should start the name of the hook with `use`. It in not mandatory but it is a convention. If you don't start the name with `use`, then React will not be able to identify it as a hook or linter will give you a warning if you are using `linters`.
 - Let's create a custom hook for fetching data from the server:
 ```javascript
 const useResMenu = (resId) => {
@@ -34,7 +34,7 @@ export default useResMenu;
 
 
 ## Optimising the App
-Basically, bundlers like parcel etc. are minified our code into single file, and it becomes a large size file that can take lot of time to load. When you build large scale Apps make sure to break down your app into small pieces.
+Basically, bundlers like parcel etc. are minified our code into single file, and it becomes a large size file that can take `lot of time to load`. When you build large scale Apps make sure to break down your app into small pieces.
     - Should bundle your thousand file.
     - Should not bundle thousand file into single file.
 Means, try to make smaller bundles of your files, this process known as `Chuncking`, `Code Splitting`, `Lazy Loading`, `Dynamic Bundling`, `On Demand Loading`, `Dynamic Importing`
@@ -42,7 +42,7 @@ Means, try to make smaller bundles of your files, this process known as `Chuncki
 - make small bundles for a specific feature, and load them when needed.
 
 ## lazy loading
-- Lazy loading is a technique in which you load the code only when it is needed.
+- `Lazy loading` is a technique in which you load the code only when it is needed.
 - The Component not imported diractly, it is imported using `lazy()` function.
 ```javascript
 import { lazy } from 'react';
@@ -61,6 +61,6 @@ const Grocery = lazy(()=> import('./Grocery'));
     )
 }
 ```
-hw 
-make a hook for fetch data for body ✅
-make a hook without 'use', mean try to change the name of the hook ✅
+#### Homework 
+- make a hook for fetch data for body ✅
+- make a hook without 'use', mean try to change the name of the hook ✅

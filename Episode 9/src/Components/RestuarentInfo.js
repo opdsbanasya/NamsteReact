@@ -29,12 +29,12 @@ const RestuarentInfo = () => {
         </div>
         <div className="menu">
             <h3>Menu Items</h3>
-            <div className="menu-item">
+            <div className="menu-item-box">
                 {itemCards.map(item => {
-                    return <div  key={item?.card?.info?.id}>
+                    return <div className="menu-item" key={item?.card?.info?.id}>
                         <ul>
                             <li>{item?.card?.info?.name}</li>
-                            <li >₹{item?.card?.info?.price/100 || item?.card?.info?.defaultPrice/100}</li>
+                            <li>₹{item?.card?.info?.price/100 || item?.card?.info?.defaultPrice/100}</li>
                         </ul>
                         <img src={MENU_IMG + item?.card?.info?.imageId} />
                     </div>

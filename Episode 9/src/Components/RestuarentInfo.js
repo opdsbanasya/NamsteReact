@@ -1,12 +1,15 @@
 import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
 import useRestaurentMenu from "../utils/useRestaurentMenu";
+import { MENU_IMG } from "../utils/constant.js";
 
 const RestuarentInfo = () => {
 
     const {id} = useParams();
     
     const resMenuInfo = useRestaurentMenu(id);
+    console.log(resMenuInfo);
+    
 
     if(resMenuInfo === null) return <Shimmer />
     const {name, avgRating, costForTwoMessage, cuisines, sla, areaName
@@ -26,11 +29,17 @@ const RestuarentInfo = () => {
         </div>
         <div className="menu">
             <h3>Menu Items</h3>
-            <ul>
+            <div className="menu-item">
                 {itemCards.map(item => {
-                    return <li key={item?.card?.info?.id}>{item?.card?.info?.name} - ₹{item?.card?.info?.price/100 || item?.card?.info?.defaultPrice/100}</li>
+                    return <div  key={item?.card?.info?.id}>
+                        <ul>
+                            <li>{item?.card?.info?.name}</li>
+                            <li >₹{item?.card?.info?.price/100 || item?.card?.info?.defaultPrice/100}</li>
+                        </ul>
+                        <img src={MENU_IMG + item?.card?.info?.imageId} />
+                    </div>
                 })}
-            </ul>
+            </div>
         </div>
     </div>
 }

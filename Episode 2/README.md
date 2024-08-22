@@ -61,7 +61,7 @@ transitive dependencies are the dependencies of the dependencies of a project. F
 ### why not push node_modules to git?
 `node_modules` is a folder that contains all the dependencies of a project. It is very large in size. If you push node_modules to git, it will increase the size of the repository. It is not a good practice to push node_modules to git.
 
-![node_modules meme](https://d33wubrfki0l68.cloudfront.net/9722a8164dec5096faa0144f7d7466c9f97e87d5/1af5e/images/uploads/node_modules_meme.png)
+<img src="https://d33wubrfki0l68.cloudfront.net/9722a8164dec5096faa0144f7d7466c9f97e87d5/1af5e/images/uploads/node_modules_meme.png" style="height:300px" />
 
 If you have `package.json` and `package-lock.json`file, you can recreate node_modules on any machine by the following command:
 ```terminal

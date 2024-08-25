@@ -19,7 +19,7 @@ const Header = () => {
                 <li className="text-lg hover:underline font-semibold"><Link to="/contact">Contact Us</Link></li>
                 <li className="text-lg hover:underline font-semibold"><Link to="/grocery">Grocery</Link></li>
                 <li className="text-lg hover:underline font-semibold">Cart</li>
-                <button className="w-20 px-4 py-2 bg-blue-600 text-white rounded-lg" onClick={() => { 
+                <button className="w-20 px-4 py-2 bg-blue-500 text-white rounded-lg" onClick={() => { 
                     btnName === "login" ? 
                     setBtnName("logout") : 
                     setBtnName("login") 

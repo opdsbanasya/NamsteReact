@@ -8,7 +8,6 @@ const RestuarentInfo = () => {
     const {id} = useParams();
     
     const resMenuInfo = useRestaurentMenu(id);
-    console.log(resMenuInfo);
     
 
     if(resMenuInfo === null) return <Shimmer />

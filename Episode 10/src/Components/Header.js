@@ -7,19 +7,19 @@ const Header = () => {
     const [btnName, setBtnName] = useState("login")
     const userStatus = useOnlineStatus();
 
-    return <header>
-        <div id="logo-container">
-            <img id="logo" src={LOGO_URL} />
+    return <header className="w-full h-[12vh] flex items-center justify-between px-10 shadow-md mb-4">
+        <div className="w-1/3 h-full">
+            <img className="h-full object-cover" src={LOGO_URL} />
         </div>
-        <nav>
-            <ul>
-                <li>Internet Status: {userStatus === false ? "🔴" : "🟢"}</li>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About Us</Link></li>
-                <li><Link to="/contact">Contact Us</Link></li>
-                <li><Link to="/grocery">Grocery</Link></li>
-                <li>Cart</li>
-                <button className="login" onClick={() => { 
+        <nav className="w-2/3 h-full flex items-center justify-end">
+            <ul className="flex items-center space-x-7"> 
+                <li className="text-lg font-semibold">Internet Status: {userStatus === false ? "🔴" : "🟢"}</li>
+                <li className="text-lg hover:underline font-semibold"><Link to="/">Home</Link></li>
+                <li className="text-lg hover:underline font-semibold"><Link to="/about">About Us</Link></li>
+                <li className="text-lg hover:underline font-semibold"><Link to="/contact">Contact Us</Link></li>
+                <li className="text-lg hover:underline font-semibold"><Link to="/grocery">Grocery</Link></li>
+                <li className="text-lg hover:underline font-semibold">Cart</li>
+                <button className="w-20 px-4 py-2 bg-blue-600 text-white rounded-lg" onClick={() => { 
                     btnName === "login" ? 
                     setBtnName("logout") : 
                     setBtnName("login") 

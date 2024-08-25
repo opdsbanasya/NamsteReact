@@ -20,7 +20,7 @@ class About extends Component{
 
         return (
             <div>
-                <h1>About Us</h1>
+                <h1 className="text-2xl font-bold ml-5">About Us</h1>
                 <UserCardClass />
             </div>
         );

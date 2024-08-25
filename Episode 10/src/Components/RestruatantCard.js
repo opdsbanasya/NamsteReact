@@ -5,7 +5,7 @@ const RestruatantCard = (prop) => {
     const { name, cuisines, avgRatingString, sla, locality, costForTwo, cloudinaryImageId } = resCardInfo?.info;
 
 
-    return <div className="res-card w-full h-full cursor-pointer bg-slate-100 hover:bg-slate-200 mb-16">
+    return <div className="res-card w-full h-full cursor-pointer bg-slate-100 hover:bg-slate-200 mb-16 rounded-md overflow-hidden">
         <img alt="res-logo" className="res-logo h-1/2 w-full object-cover" src={CDN_URL + cloudinaryImageId} />
         <div className="res-info px-[1vw] py-[0.5vw]">
             <h4 className="text-lg font-bold ">{name}</h4>

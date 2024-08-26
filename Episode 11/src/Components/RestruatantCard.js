@@ -1,4 +1,5 @@
 import { CDN_URL } from "../utils/constant"
+
 const RestruatantCard = (prop) => {
     const { resCardInfo } = prop;
 
@@ -15,6 +16,17 @@ const RestruatantCard = (prop) => {
             <h6 className="text-sm">{locality}</h6>
         </div>
     </div>
+}
+
+export const NearbyResCard = (RestruatantCard) => {
+    return (props) => {
+        return (
+            <>
+                <label className="absolute -top-7 left-0 z-10 ml-1 p-1 text-xs rounded-md bg-zinc-300  font-semibold" >Nearly</label>
+                <RestruatantCard {...props} />
+            </>
+        )
+    }
 }
 
 export default RestruatantCard;

@@ -1,12 +1,12 @@
 import { MENU_IMG } from "../utils/constant";
 
 const MenuItemList = ({itemList}) => {
-    console.log(itemList);
+    // console.log(itemList);
     
     return (
         <div className="w-full rounded-md space-y-6">
             {itemList.map(item => (
-                <div key={item.card.info.id} className="w-full h-fit  bg-zinc-100 flex items-center p-5 rounded-md relative">
+                <div key={item.card.info.id} className="w-full h-fit  flex items-center p-5 rounded-md relative">
                     <div className="w-9/12">
                         <h2 className="text-lg font-semibold">{item.card.info.name}</h2>
                         <h3 className="text-lg font-semibold"> ₹ {item.card.info.price/100 || item.card.info.defaultPrice/100}</h3>

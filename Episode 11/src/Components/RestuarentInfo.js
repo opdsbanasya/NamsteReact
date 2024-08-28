@@ -30,7 +30,7 @@ const RestuarentInfo = () => {
                 <p className="delivery-time">{sla?.slaString} • {areaName} • {sla?.lastMileTravelString}</p>
             </section>
         </div>
-        <div className="menu w-[70%] py-[2vw] space-y-4">
+        <div className="menu w-[70%] py-[2vw] space-y-8">
             {menuCategories.map((menuCategory, index) => (
                 <RestaurentInfoCategory key={index} data={menuCategory?.card?.card}/>
             ))}

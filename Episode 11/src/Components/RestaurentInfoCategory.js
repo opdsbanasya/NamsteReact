@@ -1,16 +1,23 @@
+import { useState } from "react";
 import MenuItemList from "./MenuItemList";
 
 const RestaurentInfoCategory = ({data}) => {
     // console.log(data);
+    const [showItems, setShowItems] = useState(false);
+
+    const handleClick = () => {
+        console.log("click");
+        setShowItems(!showItems);
+    }
     
     return (
-        <section className="w-full ">
-            <div className="w-full flex justify-between items-center gap-5 px-5 py-3 rounded-md bg-zinc-200 mb-2">
+        <section className="w-full bg-zinc-100 rounded-md">
+            <div onClick={handleClick} className="cursor-pointer w-full flex justify-between items-center gap-5 px-5 py-3 rounded-md  mb-2">
                 <h2 className="text-xl font-bold">{data?.title} ({data?.itemCards.length})</h2>
-                <h4 className="text-xl font-bold">⬇️</h4>
+                <h4 className={`text-xl font-bold ${showItems && "rotate-180"}`}>⬇️</h4>
             </div>
             
-            <MenuItemList itemList={data.itemCards}/>
+            {showItems && <MenuItemList itemList={data.itemCards}/>}
         </section>
     );
 }

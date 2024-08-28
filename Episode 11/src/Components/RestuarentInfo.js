@@ -20,7 +20,6 @@ const RestuarentInfo = () => {
     const menuCategories = resMenuInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(category => (
         category?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     ));
-    console.log(menuCategories);
 
     return <div className="res-menu w-full h-full px-[10vw] py-[0.5vw] flex items-center flex-col justify-center">
         <h2 className="text-xl font-semibold text-left w-[70%] mb-[10]">{name}</h2>

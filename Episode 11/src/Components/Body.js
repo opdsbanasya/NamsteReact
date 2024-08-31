@@ -21,6 +21,9 @@ const Body = () => {
     const RestruatantCardNearly = NearbyResCard(RestruatantCard);
 
     const {setUserName} = useContext(UserContext)
+    
+    const [newUserName, setNewUserName] = useState(null);
+    console.log(newUserName);
 
     useEffect(() => {
         setFilterRestaurent(restaurant)
@@ -60,13 +63,17 @@ const Body = () => {
                 }}>Top Rated Restaurants</button>
             <div className="space-x-4">
                 <input type="text" 
-                    placeholder="Enter the username" 
+                    placeholder="Enter the new username" 
                     className="p-1 text-sm border-2 border-solid border-slate-600 rounded-md"
                     onChange={(e)=>{
-                        setUserName(e.target.value)
+                        setNewUserName(e.target.value)
                     }}
                 />
-                <button className="px-2 py-1 text-sm bg-blue-600 text-white rounded-lg">Update username</button>
+                <button className="px-2 py-1 text-sm bg-blue-600 text-white rounded-lg"
+                    onClick={()=>{
+                        setUserName(newUserName)
+                    }}
+                >Update username</button>
 
             </div>
         </div>

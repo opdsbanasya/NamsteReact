@@ -15,7 +15,7 @@ const Body = () => {
     const userStatus = useOnlineStatus();
 
     const restaurant = useResData(RES_LIST_API);
-    console.log(restaurant);
+    // console.log(restaurant);
 
     const RestruatantCardNearly = NearbyResCard(RestruatantCard);
 

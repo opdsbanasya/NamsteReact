@@ -1,10 +1,11 @@
 import RestruatantCard, { NearbyResCard } from "./RestruatantCard";
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import useResData from "../utils/useResData";
 import { RES_LIST_API } from "../utils/constant";
+import UserContext from "../utils/UserContext";
 const Body = () => {
 
     // const [restaurant, setRestaurant] = useState([]);
@@ -18,6 +19,8 @@ const Body = () => {
     // console.log(restaurant);
 
     const RestruatantCardNearly = NearbyResCard(RestruatantCard);
+
+    const {setUserName} = useContext(UserContext)
 
     useEffect(() => {
         setFilterRestaurent(restaurant)
@@ -55,6 +58,13 @@ const Body = () => {
                     const filterRestaurent = restaurant.filter(res => res.info.avgRating > 4.4);
                     setFilterRestaurent(filterRestaurent);
                 }}>Top Rated Restaurants</button>
+            <input type="text" 
+                placeholder="Enter the username" 
+                className="px-2 py-1 border-2 border-solid border-slate-600 rounded-md"
+                onChange={(e)=>{
+                    setUserName(e.target.value)
+                }}
+            />
         </div>
         {filterRestaurent.length === 0 ? <Shimmer /> : <div id="res-container" className="w-full h-full flex items-center justify-center gap-[4vw] flex-wrap ">
             {filterRestaurent.map(restaurant => (

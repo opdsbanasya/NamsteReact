@@ -117,3 +117,18 @@ const appStore = configureStore({
 
 export default appStore;
 ```
+### Subscribing to the Store
+- Use the `useSelector` hook from `react-redux` to read data from the store, but need to tells the portion which portion of the store we want to read.
+```JS
+import { useSelector } from 'react-redux';
+
+const Header = () => {
+    const cartItems = useSelector(store => store.cart.items);
+    return (
+        <header>
+            <h1>Cart</h1>
+            <p>{items.length}</p>
+        </header>
+    );
+}
+```

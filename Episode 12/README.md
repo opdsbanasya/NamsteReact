@@ -101,7 +101,7 @@ const cartSlice = createSlice({
 
 export const {addItem, removeItem, clearCart} = cartSlice.actions;
 
-export default cartSlice;
+export default cartSlice.reducer;
 ```
 - Now, we have to add this slice to the store. Store have own reducer and consists to all small reducers from different slices.
 - We have to import the `cartSlice` in the `store.js` file and add it to the `reducer` property of the `configureStore` function.
@@ -117,6 +117,26 @@ const appStore = configureStore({
 
 export default appStore;
 ```
+### Dispatching Actions
+- Use the `useDispatch` hook from `react-redux` to dispatch actions to the store.
+- It gices a dunction which takes actions as argument and these actions also methods that initially defined in the slice. These metheds can also take arguments or not.
+- When the item dispatch, the redux created an payload object internally and it will add items to payload object and it pass to action.
+```JS
+import { useDispatch } from 'react-redux';
+import { addItem, removeItem, clearCart } from '../store/cartSlice';
+
+const ItemList = () =>{
+    const dispatch = useDispatch();
+    const handleClickItem = () =>{
+        dispatch(addItem("Pizza"));
+    };
+    return {
+        <Button onClick={handleClickItem}>
+            Add +
+        </Button>
+    }
+}
+```
 ### Subscribing to the Store
 - Use the `useSelector` hook from `react-redux` to read data from the store, but need to tells the portion which portion of the store we want to read.
 ```JS
@@ -126,8 +146,9 @@ const Header = () => {
     const cartItems = useSelector(store => store.cart.items);
     return (
         <header>
-            <h1>Cart</h1>
-            <p>{items.length}</p>
+            <h1>Cart
+                <sup>{items.length}</sup>
+            </h1>
         </header>
     );
 }

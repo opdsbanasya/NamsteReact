@@ -10,6 +10,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./store/appStore";
+import Cart from "./Components/Cart";
 
 
 const App = () => {
@@ -65,6 +66,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/restuarentInfo/:id",
                 element: <RestuarentInfo />
+            },
+            {
+                path: "/cart",
+                element: <Cart />
             },
         ],
         errorElement: <ErrorPage />

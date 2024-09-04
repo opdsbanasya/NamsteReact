@@ -26,7 +26,7 @@ const RestuarentInfo = () => {
 
     return <div className="res-menu w-full h-full px-[10vw] py-[0.5vw] flex items-center flex-col justify-center">
         <h2 className="text-xl font-semibold text-left w-[70%] mb-[10]">{name}</h2>
-        <div className="res-menu-about w-[70%] h-[10%] bg-blue-50 px-16 py-5">
+        <div className="res-menu-about w-[70%] h-[10%] bg-blue-50 px-16 py-5 rounded-lg shadow-md">
             <section className="res-menu-about-left">
                 <p className="font-semibold text-lg">{cuisines.join(", ")}</p>
                 <p className="flex gap-2 items-center"><span className="starIcon text-yellow-500 text-lg leading-4">★</span>{avgRating} • {costForTwoMessage}</p>

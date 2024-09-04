@@ -15,7 +15,7 @@ const RestaurentInfoCategory = ({data, showItems, setShowItems}) => {
                 <h4 className={`text-xl font-bold ${showItems && "rotate-180"}`}>⬇️</h4>
             </div>
             
-            {showItems && <MenuItemList itemList={data.itemCards}/>}
+            {showItems && <MenuItemList itemList={data.itemCards} btnType={"add"}/>}
         </section>
     );
 }

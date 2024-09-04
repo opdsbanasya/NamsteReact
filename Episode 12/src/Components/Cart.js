@@ -20,7 +20,7 @@ const Cart = () => {
             </div>
             {cartItems.length === 0 && <h1 className="w-[65%] text-2xl mt-4 pt-4 font-semibold border-t-2 border-t-slate-200 text-center">No Item !</h1>}
             <div className="w-[70%]">
-                <MenuItemList itemList={cartItems}/>
+                <MenuItemList itemList={cartItems} btnType={"remove"}/>
             </div>
         </div>
     )

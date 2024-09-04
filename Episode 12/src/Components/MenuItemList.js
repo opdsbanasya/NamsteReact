@@ -14,7 +14,7 @@ const MenuItemList = ({ itemList }) => {
     return (
         <div className="w-full rounded-md px-5">
             {itemList.map(item => (
-                <div key={item.card.info.id} className="w-full h-fit  flex items-center py-10 relative border-b-2 border-zinc-400 ">
+                <div key={item.card.info.id} className="w-full h-fit flex items-center justify-center py-10 relative border-t-2 mt-5 border-zinc-400 ">
                     <div className="w-9/12">
                         <h2 className="text-lg font-semibold">{item.card.info.name}</h2>
                         <h3 className="text-lg font-semibold"> ₹ {item.card.info.price / 100 || item.card.info.defaultPrice / 100}</h3>

@@ -103,3 +103,17 @@ export const {addItem, removeItem, clearCart} = cartSlice.actions;
 
 export default cartSlice;
 ```
+- Now, we have to add this slice to the store. Store have own reducer and consists to all small reducers from different slices.
+- We have to import the `cartSlice` in the `store.js` file and add it to the `reducer` property of the `configureStore` function.
+```JS
+import { configureStore } from '@reduxjs/toolkit';
+import cartReducer from './cartSlice';
+
+const appStore = configureStore({
+    reducer:{
+        cart: cartReducer,
+    }
+});
+
+export default appStore;
+```

@@ -14,7 +14,7 @@ const Header = () => {
     // console.log(loggedInUser);
 
     const cartItems = useSelector(store => store.cart.items);
-    console.log(cartItems);
+    // console.log(cartItems);
 
 
     return <header className="w-full h-[12vh] flex items-center justify-between px-10 shadow-md mb-4">

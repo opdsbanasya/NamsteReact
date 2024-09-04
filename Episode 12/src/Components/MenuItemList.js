@@ -6,9 +6,9 @@ const MenuItemList = ({ itemList }) => {
     // console.log(itemList);
     const dispatch = useDispatch();
 
-    const handleClickItem = (itemName) => {
+    const handleClickItem = (item) => {
         // Dispatch an action
-        dispatch(addItem(itemName));
+        dispatch(addItem(item));
     }
 
     return (
@@ -24,7 +24,7 @@ const MenuItemList = ({ itemList }) => {
                         <img src={MENU_IMG + item.card.info.imageId} alt={item.card.info.name} className="h-40 w-3/12 object-cover rounded-md " />
                     )}
                     <button className="absolute right-[4.5rem] bottom-10 px-1 border-2 border-black bg-black text-white font-semibold rounded-lg"
-                        onClick={() => { handleClickItem(item.card.info.name) }}
+                        onClick={() => { handleClickItem(item) }}
                     >Add +</button>
                 </div>
             ))}

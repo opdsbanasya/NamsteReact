@@ -23,7 +23,7 @@ const Body = () => {
     const {setUserName} = useContext(UserContext)
     
     const [newUserName, setNewUserName] = useState(null);
-    console.log(newUserName);
+    // console.log(newUserName);
 
     useEffect(() => {
         setFilterRestaurent(restaurant)

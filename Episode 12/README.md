@@ -212,6 +212,17 @@ clearCart: (state) => {
 ```
 Redux Toolkit say either mutable the existing state or return a new state `return {items: []}`.
 
+## Redux DevTools
+- It is a browser extension that helps to debug the redux store.
+- If a App have lot of component that mutating the state and subscribing to the store, then it is very difficult to debug the store. Redux DevTools help to debug the store.
+- It shows the state of the store, actions, and the changes in the store.
+- It also allows you to time travel, means you can go back and forth in the state of the store.
+- It also allows you to export and import the state of the store.
+- It also write the test cases for the store.
+- Install the [Redux DevTools Extension](https://chromewebstore.google.com/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) from the Chrome Web Store.
+- See the below image for better understanding of Redux DevTools.
+![Redux DevTools](https://mini-rx.io/assets/images/redux-dev-tools-150200902ec356d9638e05206bbe31a7.gif)
+
 hw
-onClick(fn) vs onClick(fn()) vs onClick={fn} vs onClick={() => fn()}
-RTK Query
+- onClick(fn) vs onClick(fn()) vs onClick={fn} vs onClick={() => fn()}
+- RTK Query

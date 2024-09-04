@@ -1,4 +1,4 @@
-import RestuarentCard, { NearbyResCard } from "./RestaurentCard"
+import RestuarentCard, { NearbyResCard } from "./RestaurentCard";
 import { useContext, useEffect, useState } from 'react';
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";

@@ -17,16 +17,16 @@ const App = () => {
     useEffect(() => {
         // make an api call
         const data = {
-            name:"Tom",
+            name: "Tom",
         }
         setUserName(data.name);
     }, []);
     console.log(userName);
-    
+
 
     return (
         <Provider store={appStore}>
-            <UserContext.Provider value={{loggedInUser:userName, setUserName}}>
+            <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
                 <div>
                     <Header />
                     <Outlet />

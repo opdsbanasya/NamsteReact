@@ -153,3 +153,8 @@ const Header = () => {
     );
 }
 ```
+
+
+hw
+onClick(fn) vs onClick(fn()) vs onClick={fn} vs onClick={() => fn()}
+RTK Query

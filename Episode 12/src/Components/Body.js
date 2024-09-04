@@ -1,4 +1,4 @@
-import RestruatantCard, { NearbyResCard } from "./RestruatantCard";
+import RestuarentCard, { NearbyResCard } from "./RestaurentCard"
 import { useContext, useEffect, useState } from 'react';
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -18,7 +18,7 @@ const Body = () => {
     const restaurant = useResData(RES_LIST_API);
     // console.log(restaurant);
 
-    const RestruatantCardNearly = NearbyResCard(RestruatantCard);
+    const RestuarentCardNearly = NearbyResCard(RestuarentCard);
 
     const {setUserName} = useContext(UserContext)
     
@@ -86,8 +86,8 @@ const Body = () => {
                 >
                     {
                         restaurant?.info?.sla?.lastMileTravel <= 2.5 
-                            ? <RestruatantCardNearly resCardInfo={restaurant} /> 
-                            : <RestruatantCard resCardInfo={restaurant} />
+                            ? <RestuarentCardNearly resCardInfo={restaurant} /> 
+                            : <RestuarentCard resCardInfo={restaurant} />
                     }
                 </Link>
             ))}

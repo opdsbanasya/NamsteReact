@@ -12,6 +12,8 @@ const RestuarentInfo = () => {
     
     const [showItems, setShowItems] = useState(null);
 
+    const [toggle, setToggle] = useState(false);
+
     if(resMenuInfo === null) return <Shimmer />
     const {name, avgRating, costForTwoMessage, cuisines, sla, areaName
     } = resMenuInfo?.data?.cards[2]?.card?.card?.info;
@@ -37,6 +39,8 @@ const RestuarentInfo = () => {
                 data={menuCategory?.card?.card}
                 showItems={showItems == index ? true : false}
                 setShowItems={()=>setShowItems(index)}
+                toggle={toggle}
+                setToggle={()=>setToggle(!toggle)}
                 />
             ))}
         </div>

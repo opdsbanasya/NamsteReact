@@ -8,6 +8,8 @@ import ErrorPage from "./Components/ErrorPage";
 import RestuarentInfo from "./Components/RestuarentInfo";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./store/appStore";
 
 
 const App = () => {
@@ -23,12 +25,14 @@ const App = () => {
     
 
     return (
-        <UserContext.Provider value={{loggedInUser:userName, setUserName}}>
-            <div>
-                <Header />
-                <Outlet />
-            </div>
-        </UserContext.Provider>
+        <Provider store={appStore}>
+            <UserContext.Provider value={{loggedInUser:userName, setUserName}}>
+                <div>
+                    <Header />
+                    <Outlet />
+                </div>
+            </UserContext.Provider>
+        </Provider>
     )
 }
 

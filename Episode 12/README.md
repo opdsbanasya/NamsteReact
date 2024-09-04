@@ -1,4 +1,4 @@
-# Redux
+# Redux 
 - Redux is a data management library that can be used with any UI library or framework, including React.
 - Redux & React are both different libraries, Redux is a state management library, while React is a UI library.
 - Other libraries like Zustand, MobX, Recoil, etc. can also be used for state management.
@@ -32,3 +32,38 @@
 - Create Slices & add to the Store
 - Dispatch Actions
 - Subscribe to the Store
+
+### Installing the Redux Library
+Just run following commands in the terminal
+```terminal
+npm install @reduxjs/toolkit react-redux
+```
+
+### Building the Redux Store
+- Create a folder named `store` in the `src` folder.
+- Create a file named `store.js` in the `store` folder.
+- Use the `cinfigureStore` function from `@reduxjs/toolkit` to create the store.
+```JS
+import { configureStore } from '@reduxjs/toolkit';
+
+const appStore = configureStore();
+
+export default appStore;
+```
+### Connecting the Redux Store to the React App
+- Wrap the `App` component with the `Provider` component from `react-redux`.
+- Pass the `store` prop to the `Provider` component.
+- If you want to provide the store to a small portion just wrap that portion with `Provider` component.
+```JS
+import { Provider } from 'react-redux';
+import store from './store/store';
+
+const App = () => {
+    return (
+        <Provider store={store}>
+            <div className="App">
+                <h1>Redux Store</h1>
+            </div>
+        </Provider>
+    );
+}

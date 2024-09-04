@@ -153,7 +153,64 @@ const Header = () => {
     );
 }
 ```
+## Some other important things
+- Whenever you use `Selector`, Make Sure you are subscribing the right portion of the store. If you subscribe whole store then It will be a large perfomance loss. So always subscribe the small portion.
+```JS
+const store = useSelector(store => store); // Don't do this ❌
+const cartItems = store.cart.items; 
 
+const cartItems = useSelector(store => store.cart.items); // Do this ✅
+// there both are same thing
+```
+- **`reducer and recucers`**: When you writing the store you have one big reducer for whole app & it contains multiple small reducers. These small reducers are known as `reducers`. A reducer can be combination of reducers. We exporting by default the reducer from the slice.
+```JS
+export default cartSlice.reducer;
+```
+
+## State in Vanilla Redux
+- When we will use `vanilla redux`, in older way of redux, there was a big problem with state, redux give clear warning `Don't Mutable State`, this was prohibited. 
+- We use to never modify our store. Basically, we create a copy of state variable and will modify the newState variable and return it, return is `Mendatory`. This is known as `Immutability`.
+```JS
+reducers:{
+    addItem: (state, action) => {
+        const newState = {...state};
+        newState.items.push(action.payload);
+        return newState;
+    }
+}
+```
+- But in `Redux ToolKit`, we have to mutate the state and do not have to return the state. Redux toolkit also internally handle the immutability, don't ask to Developer to do it.
+```JS
+reducers:{
+    addItem: (state, action) => {
+        state.items.push(action.payload);
+    }
+}
+```
+- Redux Toolkit uses `Immer JS` library internally to handle the immutability.
+- Immer is a tiny package that allows you to work with immutable state in a more convenient way.
+- Immer find the difference between the `original state` and the `new state` and at the end it will return the new state.
+- See the picture below for better understanding of Immer JS.
+![Immer JS](https://immerjs.github.io/immer/assets/images/immer-4002b3fd2cfd3aa66c62ecc525663c0d.png)
+- Read more about [Immer JS](https://immerjs.github.io/immer/docs/introduction)
+
+- We can't modify states directly because when we try to modify the state is a local variable inside a reducer.
+```JS
+// Original State = {items: ["Pizza"]}
+clearCart: (state) => {
+    console.log(state); // {items: ["Pizza"]}
+    state = []; // ❌
+    console.log(state); // []
+}
+```
+- We try to printing the state but can't print perfectly, to print perfectly use `current()` from `Redux Toolkit`. 
+```JS
+import { current } from '@reduxjs/toolkit';
+clearCart: (state) => {
+    console.log(current(state)); // {items: ["Pizza"]}
+}
+```
+Redux Toolkit say either mutable the existing state or return a new state `return {items: []}`.
 
 hw
 onClick(fn) vs onClick(fn()) vs onClick={fn} vs onClick={() => fn()}

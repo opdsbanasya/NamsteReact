@@ -67,3 +67,39 @@ const App = () => {
         </Provider>
     );
 }
+```
+### Creating Slices & Adding to the Store
+- Create a folder named `slices` in the `store` folder.
+- Create a file named `cartSlice.js` in the `slices` folder.
+- Create a slice using the `createSlice` function from `@reduxjs/toolkit`.
+- `createSlice` function takes an configuration object as an argument with 3 properties: `name`, `initialState`, and `reducers`.
+- `name` is the name of the slice.
+- `initialState` is the initial state of the slice.
+- `reducers` also an object where all type of actions(like small APIs to communicate to redux store) are defined.
+- Reducers functions are take `2 arguments` as an input, `state` and `action`.
+- At the end of we have to export the `actions` and `reducer` from the slice.
+```JS
+import { createSlice } from "@reduxjs/toolkit";
+
+const cartSlice = createSlice({
+    name:"cart",
+    initialState:{
+        items:[],
+    },
+    reducers:{
+        addItem: (state, action) => {
+            state.items.push(action.payload);
+        },
+        removeItem: (state) => {
+            state.items.pop();
+        },
+        clearCart: (state) => {
+            state.items.length = 0;
+        }
+    }
+});
+
+export const {addItem, removeItem, clearCart} = cartSlice.actions;
+
+export default cartSlice;
+```

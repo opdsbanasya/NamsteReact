@@ -115,6 +115,10 @@ componentDidMount(prevProps, prevState){
     }
 }
 ```
+- See the Image for better understanding.
+![LifeCycle](./src/assets/lifeCycleOfClassComponent.jpg)
+- Also check the [wojtekmaj/react-lifecycle-methods-diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+
 #### use of componentWillUnmount
 When we leaving the page we need to clear lot of thing like :
 - `clearInterval` is one of them. because SPAs are not reloading and we need to clear the interval when we leave the page. Than we clear the interval in `componentWillUnmount`.

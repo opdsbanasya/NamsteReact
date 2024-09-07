@@ -18,7 +18,7 @@
 - The Redux store is the `heart` of the Redux application. It is a single source of truth for the state of the application.
 - The store have `small portions` that known as **`Slice`**. There can be lot of slices in a store, and these slices can be `empty` or can have data.
 ### Operations inside the Redux Store
-- **`Write Operation`**: We can't directly write data to the store, here we have a way to write, Suppose we want to built a feature to `add items` in the cart, then we have to **dispatch an action** to the store, and then the store will update the data. When we click on add button, it dispatches an action to the store, and it call a function and this function internally modify the cart slice. These functions are known as **`Reducer`**.
+- **`Write Operation`**: We can't directly write data to the store, here we have a way to write, Suppose we want to built a feature to `add items` in the cart, then we have to **`dispatch an action`** to the store, and then the store will update the data. When we click on add button, it dispatches an action to the store, and it call a function and this function internally modify the cart slice. These functions are known as **`Reducer`**.
 
 - **`Read Operation`**: For reading operation, we use `useSelector` hook, which is provided by `react-redux` library. It read the data from the Redux store and give the data to the component and update the UI. This `phonomena` is known as **`Subscribing to Store`**, Means it `sync` the data between store and component. If data changes in store then it automatically update the component.
 

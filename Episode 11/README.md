@@ -47,8 +47,8 @@ const Body = () => {
     - **Components**: It shows the component hierarchy. It have the 2 layers - `UI Layer` and `Data Layer`.
     - **Profiler**: Whatever you will do inside app, it try to record all the activities and show in the profiler tab.
 - See the below image:
-<image style="height:65%" src="https://react.dev/images/docs/react-devtools-extension.png">
->- To install it, go to the `chrome web store` and search for `React Developer Tools` and install it or follow the link [React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi).
+![React-devtools](https://react.dev/images/docs/react-devtools-extension.png)
+- To install it, go to the `chrome web store` and search for `React Developer Tools` and install it or follow the link [React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi).
 
 ## Creating a accordian component
 - When you `collapse` and `expend` a part of UI, known as accordian. It have 2 parts - `Header` and `Body`. When you click on header, body will be shown and hide.

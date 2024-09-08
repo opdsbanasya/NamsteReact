@@ -92,7 +92,16 @@ Run the command:
 ```bash
 npx jest --init
 ```
-- It ask some question, see the image:
+- It ask following question:
+```
+The following questions will help Jest to create a suitable configuration for your project
+
+√ Would you like to use Typescript for the configuration file? ... no
+√ Choose the test environment that will be used for testing » jsdom (browser-like)
+√ Do you want Jest to add coverage reports? ... yes
+√ Which provider should be used to instrument code for coverage? » babel
+√ Automatically clear mock calls, instances, contexts and results before every test? ... yes
+```
 
 ## Install JSDOM
 now we have to install `JSDOM`, if you use `jest 28` or higher version.

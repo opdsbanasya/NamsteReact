@@ -139,7 +139,7 @@ test("Sum function should be calculate the sum of a and b", () => {
 ```
 
 ## Writing the Test case for UI Component
-- **WHENEVER** you test an UI component inside react, you will have to `render` that component on to JSDOM first. For rendering a component to jsdom use render method from `React Testing Library`. This render method takes component which going to be render. Whatever you render can accessed using `screen` object from `React Testing Library`. This screen object have lot of method for different type of queries to access from render method. It known as `Quering`. When we get accessed all Elements taht role a specific query. These are stored an varible. Now we check the the result when a Function or Component is Invoking self by using `expect`. It is known as `Assertion`.
+- **WHENEVER** you test an UI component inside react, you will have to `render` that component on to JSDOM first. For rendering a component to jsdom use render method from `React Testing Library`. This render method takes component which going to be render. Whatever you render can accessed using `screen` object from `React Testing Library`. This screen object have lot of method for different type of queries to access from render method. It known as `Quering`. When we get accessed all Elements that role a specific query as JSX Syntax. These are stored in an varible. Now we check the the result when a Function or Component is Invoking self by using `expect`. It is known as `Assertion`.
 
 ## Install @babel/preset-react to make JSX work
 When we try to test the a React Component that get an error `JSx syntax isn't enable` and it say a message `add @babel/preset-react`. To add @babel/preset-react run the command:
@@ -167,7 +167,25 @@ module.exports = {
 npm i -D @testing-library/jest-dom
 ```
 
+### test case for UI Component
+```js
+import {render, screen} from "@testing-library/react";
+import ContactUs from "../ContactUs";
+import "@testing-library/jest-dom";
 
+// test case for heading
+test("Should load Contact us component", ()=>{
+    render(<ContactUs />);
+
+    // Quering
+    const heading = screen.getByRole("heading");
+
+    // Assertion
+    expect(heading).toBeInTheDocument();
+})
+```
+- We find the heading by `getByRole` method, and there are lot of method to find the element like `getByRole`, `getByText`, `getByPlaceholderText`, `getByLabelText`, `getByDisplayValue`, `getByAltText`, `getByTitle`, `getByTestId`, `getBySelectText`, etc.
+- We check the heading is in the document or not by using `expect` method and `toBeInTheDocument` method from `@testing-library/jest-dom`. There are lot of method provided by `@testing-library/jest-dom` to assertion the components. Some are be: `toBe`, `toBeInTheDocument`, `toBeVisible`, `toBeEmpty`, etc.
 
 
 

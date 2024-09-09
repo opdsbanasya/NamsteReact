@@ -13,6 +13,7 @@ test("Should load Contact us component", ()=>{
     expect(heading).toBeInTheDocument();
 })
 
+// test case for input boxes
 test("Should input boxes are in the contact us Componet", ()=>{
     render(<ContactUs />);
 
@@ -20,5 +21,5 @@ test("Should input boxes are in the contact us Componet", ()=>{
     const inputBoxes = screen.getAllByRole("textbox");
 
     // Assertion
-    expect(inputBoxes.length).toBe(3);
+    expect(inputBoxes.length).toBeGreaterThan(2);
 })

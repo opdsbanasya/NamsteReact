@@ -117,9 +117,32 @@ __tests__
 ```
 - create file with the name `.test.[JS/TS]` or `.spec.[JS/TS]` and write inside the file.
 
+## Writing a test case for a sum() function
+Suppose we have a logic that calculate sum of 2 numbers
+- sum.js
+```js
+export const sum = (a,b) => {
+    return a+b;
+}
+```
+**Test case for sum function**: we have to use `test` function for testing that takes 2 arguments, one is `decription` for test case and second is a `callback function`. We call sum function from sum.js and result stored in a variable, Now we have to check the result calculated by sum function is right or wrong. We have to use `expect()` function for performing this operation. It takes the result and it have some methods and some provided by `Testing Library`. These methods can be take some input that you expect the output. Thhis is `Assertion`.
+- sum.test.js
+```js
+import { sum } from "../sum"
+
+test("Sum function should be calculate the sum of a and b", () => {
+    const result = sum(3,2);
+
+    // Assertion
+    expect(result).toBe(7-2);
+})
+```
+
+## Writing the Test case for UI Component
+- **WHENEVER** you test an UI component inside react, you will have to `render` that component on to JSDOM first. For rendering a component to jsdom use render method from `React Testing Library`. This render method takes component which going to be render. Whatever you render can accessed using `screen` object from `React Testing Library`. This screen object have lot of method for different type of queries to access from render method. It known as `Quering`. When we get accessed all Elements taht role a specific query. These are stored an varible. Now we check the the result when a Function or Component is Invoking self by using `expect`. It is known as `Assertion`.
+
 ## Install @babel/preset-react to make JSX work
-- **WHENEVER** you test an UI component inside react, you will have to `render` that component on to JSDOM first. For rendering a component to jsdom use render method from `React Testing Library`. This render method takes component which going to be render. Whatever you render can accessed using `screen` object from `React Testing Library`. This screen object have lot of method for different type of queries to access from render method. It known as `Quering`. When we get accessed all Elements taht role a specific query. These are stored an varible. Now we check the the result when a Function or Component is Invoking self by using `expect`. It is known as `Assertion`. 
-- When we try to test the a React Component that get an error `JSx syntax isn't enable` and it say a message `add @babel/preset-react`. To add @babel/preset-react run the command:
+When we try to test the a React Component that get an error `JSx syntax isn't enable` and it say a message `add @babel/preset-react`. To add @babel/preset-react run the command:
 ```bash
 npm i -D @babel/preset-react
 ```
@@ -143,6 +166,7 @@ module.exports = {
 ```bash
 npm i -D @testing-library/jest-dom
 ```
+
 
 
 

@@ -187,7 +187,6 @@ test("Should load Contact us component", ()=>{
 - We find the heading by `getByRole` method, and there are lot of method to find the element like `getByRole`, `getByText`, `getByPlaceholderText`, `getByLabelText`, `getByDisplayValue`, `getByAltText`, `getByTitle`, `getByTestId`, `getBySelectText`, etc.
 - We check the heading is in the document or not by using `expect` method and `toBeInTheDocument` method from `@testing-library/jest-dom`. There are lot of method provided by `@testing-library/jest-dom` to assertion the components. Some are be: `toBe`, `toBeInTheDocument`, `toBeVisible`, `toBeEmpty`, etc.
 
-- **MAKE SURE** you should write 2 or 3 test cases only for a component. It is a `good practice`.
 
 
 

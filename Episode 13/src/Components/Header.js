@@ -33,7 +33,7 @@ const Header = () => {
                     <sup className="ml-1 bg-blue-500 px-1 text-white rounded-md">{cartItems.length}</sup>
                 </li>
                 <li className="text-lg hover:underline font-semibold">{loggedInUser}</li>
-                <button className="w-20 px-4 py-2 bg-blue-500 text-white rounded-lg" onClick={() => { 
+                <button name={btnName} className="w-20 px-4 py-2 bg-blue-500 text-white rounded-lg" onClick={() => { 
                     btnName === "login" ? 
                     setBtnName("logout") : 
                     setBtnName("login") 

@@ -187,7 +187,16 @@ test("Should load Contact us component", ()=>{
 - We find the heading by `getByRole` method, and there are lot of method to find the element like `getByRole`, `getByText`, `getByPlaceholderText`, `getByLabelText`, `getByDisplayValue`, `getByAltText`, `getByTitle`, `getByTestId`, `getBySelectText`, etc.
 - We check the heading is in the document or not by using `expect` method and `toBeInTheDocument` method from `@testing-library/jest-dom`. There are lot of method provided by `@testing-library/jest-dom` to assertion the components. Some are be: `toBe`, `toBeInTheDocument`, `toBeVisible`, `toBeEmpty`, etc.
 
-
+### Grouping the test cases
+There are `describe` function to group the test cases. It takes 2 arguments, one is `description` and second is `callback function`. We can write the test cases inside the callback function. we can use nested `describe` function to group the test cases.
+```js
+describe("Contact Us Component", () => {
+    // test case 1
+    // test case 2
+    // test case 3
+})
+```
+- We can use `it` function instead of `test` function, both are same. `it` is an alias of `test`.
 
 
 

@@ -219,6 +219,9 @@ it("Should loaded", ()=>{
     const loginBtn = screen.getByRole("button");
     expect(loginBtn).toBeInTheDocument();
 })
+```
+### Test to a component that taking props
+If a component taking prop than you need to send props during render, you can send mockData.
 
 
 -HW

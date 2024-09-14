@@ -253,6 +253,31 @@ it("Should render", async () => {
 })
 ```
 
+## Some Function
+- **`beforeAll`**: It is a function that invoke a callback function before invoking all test function in describe function.
+- **`beforeEach`**: It is a another function that invokes a callback before invoke each test function.
+```js
+describe("description", ()=>{
+    beforeAll(()=>{
+        // code
+    })
+
+    beforeEach(()=>{
+        //code
+    })
+
+    test("description",()=>{
+        // code
+    })
+
+    test("description",()=>{
+        // code
+    })
+})
+```
+- There are also **`afterAll`** and **`afterEach`** functions
+
+
 
 -HW
 

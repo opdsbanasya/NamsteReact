@@ -198,6 +198,27 @@ describe("Contact Us Component", () => {
 ```
 - We can use `it` function instead of `test` function, both are same. `it` is an alias of `test`.
 
+## Test to header component
+```js
+it("Should loaded", ()=>{
+    render(<Header />)
+})
+```
+- The Header component rendered to `JSDOM`, and JSDOM understand the `JSX` & `JS` syntax, and the Header component also contain the redux code that not recognize by JSDOM. So, it will fails. To resolve it we wrap the Header component by `Provider` Component comes from `Redux` and also pass the `appStore`.
+- There are one more problem that Header contains Link component that not a JS/JSX syntax, it comes from `React-router-dom`. So, to resolve this need to provide `BrowserRouter` to the Header component.
+```JS
+it("Should loaded", ()=>{
+    render(
+        <BrowserRouter>
+            <Provider store={appStore}>
+                <Header />
+            </Provider>
+        </BrowserRouter>
+    );
+
+    const loginBtn = screen.getByRole("button");
+    expect(loginBtn).toBeInTheDocument();
+})
 
 
 -HW

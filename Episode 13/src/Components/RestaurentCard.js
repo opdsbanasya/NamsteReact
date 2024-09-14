@@ -2,7 +2,7 @@ import { CDN_URL } from "../utils/constant"
 
 const RestruatantCard = (prop) => {
     const { resCardInfo } = prop;
-    console.log(resCardInfo);
+    // console.log(resCardInfo);
 
     const { name, cuisines, avgRatingString, sla, locality, costForTwo, cloudinaryImageId } = resCardInfo?.info;
 

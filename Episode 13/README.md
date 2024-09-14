@@ -222,6 +222,36 @@ it("Should loaded", ()=>{
 ```
 ### Test to a component that taking props
 If a component taking prop than you need to send props during render, you can send mockData.
+```js
+it("Should rendered the Resaurent Card",()=>{
+    render(<RestruatantCard resCardInfo={RestaurentCardInfo}/>)
+})
+```
+## Test to Search feature
+The Search feature implemented inside Body component and the body have lot of things instead of search like API calls, etc. When we try to render the Body component to JSDOM than we got an error for fetch dunction that given us by browser and JSDOM in not a browser, it just like a browser, So it doesn't understood the fetch and give error.
+```js
+it("Should Body rendered", ()=>{
+    render(<Body />)
+})
+```
+To resolve it we create a mock function that exact similar to fetch() by using jest.fn(), it takes a callback that return a Promise. After the fecth(), json() is also given by browser and also we declare it inside the Promise.resolve and it also return a Promise that resolved by mock_data.
+```js
+global.fetch = jest.fn(()=> {
+    return Promise.resolve({
+        json: ()=>{
+            return Promise.resolve(mock_data);
+        }
+    })
+})
+```
+Now when we try to test the Body it gives a warning that is `you are update states after that the fetch method, So wrap your render function inside act` from `react-dom/test-utils`. This act function retruns a promise so it is await function than need to make async function to callback of `it`. Now this act function takes a asunc callback and inside this callback we render the Body component.
+```js
+it("Should render", async () => {
+    await act( async () => {
+        await render(<Body />)
+    })
+})
+```
 
 
 -HW

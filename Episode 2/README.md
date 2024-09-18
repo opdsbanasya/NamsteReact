@@ -72,13 +72,13 @@ npm install
 ```terminal
 npm install react react-dom
 ```
-- When we install React using npm, it will be added to the `node_modules` folder. You can import React and ReactDOM in your project using the following code:
+- A Normal `JS` file does not have `import`/`export` than need to define the `type` attribute in `script` element in html. When we install React using npm, it will be added to the `node_modules` folder. You can import React and ReactDOM in your project using the following code:
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
 ```
 - `ReactDOM` is used to render the React elements in the DOM.
-- React Apps are fast but when we build large scale apps, we need lot more things instead of React. React is not only that making apps fast like bundler. 
+- React Apps are fast but when we build large scale apps, we need lot more things instead of React. React is not only that making apps fast like bundler.
 
 ### BrowserList
 BrowserList is a configuration file that is used to specify the browser support of a project. It is used by the bundlers to compile the code according to the browser support.

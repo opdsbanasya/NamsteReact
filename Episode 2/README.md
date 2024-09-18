@@ -97,3 +97,8 @@ You can configure scripts in package.json file. You can run the scripts using np
     "build": "parcel build index.html"
 }
 ```
+Now we can run the `start` and `build` script using the following command:
+```terminal
+npm run start
+npm run build
+```

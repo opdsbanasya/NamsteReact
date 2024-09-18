@@ -29,7 +29,7 @@ const Header = () => {
                 <li className="text-lg hover:underline font-semibold"><Link to="/contact">Contact Us</Link></li>
                 <li className="text-lg hover:underline font-semibold"><Link to="/grocery">Grocery</Link></li>
                 <li className="text-lg font-semibold">
-                    <Link to="/cart">Cart</Link>
+                    <Link  data-testid="cart"  to="/cart">Cart</Link>
                     <sup className="ml-1 bg-blue-500 px-1 text-white rounded-md">{cartItems.length}</sup>
                 </li>
                 <li className="text-lg hover:underline font-semibold">{loggedInUser}</li>

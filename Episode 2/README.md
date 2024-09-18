@@ -1,19 +1,19 @@
 ### npm 
-npm is package manager for JavaScript. It is used to install and manage dependencies for a project.
+npm is `package manager` for JavaScript. It is used to install and manage `dependencies` for a project.
 ### npm init 
-`npm init` is used to create a package.json file. It will ask you some questions and then create a package.json file. if you want to skip the questions you can use `npm init -y`
+`npm init` is used to create a `package.json` file. It will ask you some questions and then create a package.json file. if you want to skip the questions you can use `npm init -y`
 ```terminal
 npm init
 npm init -y
 ```
 ### package.json
-package.json is a congiguration file that keep track of all the dependencies of a project. It also contains the name, version, description, author, devDependencies, scripts etc.
+`package.json` is a `congiguration` file that keep track of all the dependencies of a project. It also contains the `name`, `version`, `description`, `author`, `devDependencies`, `scripts` etc.
 
 ### devDependencies
-devDependencies are the dependencies that are only required during development. For example, bundlers etc.
+`devDependencies` are the dependencies that are only required during `development`. For example, `bundlers` etc.
 
-### bundler 
-bundler is a tool that manages the dependencies of a project. It bundles all the dependencies into a single file. For example, webpack, parcel etc.
+### Bundler 
+`Bundler` is a tool that manages the dependencies of a project. It bundles all the dependencies into a single file. For example, webpack, parcel etc.
 
 ### parcel 
 parcel is a bundler that is used to bundle the dependencies of a project. It is very easy to use. You can install parcel using npm. 
@@ -67,7 +67,17 @@ If you have `package.json` and `package-lock.json`file, you can recreate node_mo
 ```terminal
 npm install
 ```
-
+## Installing React
+- CDN links are not a good practice to use in production. Let's install React using npm. You need to install `react` and `react-dom` using npm.
+```terminal
+npm install react react-dom
+```
+- When we install React using npm, it will be added to the `node_modules` folder. You can import React and ReactDOM in your project using the following code:
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+```
+- `ReactDOM` is used to render the React elements in the DOM.
 - React Apps are fast but when we build large scale apps, we need lot more things instead of React. React is not only that making apps fast like bundler. 
 
 ### BrowserList

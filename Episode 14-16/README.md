@@ -1,4 +1,5 @@
-# [Project - NetflixGPT](https://github.com/opdsbanasya/NetflixGPT)
+# Project - NetflixGPT
+## [click](https://github.com/opdsbanasya/NetflixGPT) to check the project
 From Episode 14 to 16, I build a Project is `NetflixGPT`. In this project, I learned about the following topics:
 
 ## form validation

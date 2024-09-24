@@ -1,5 +1,5 @@
 # Project - NetflixGPT
-From Episode 14 to 16, I build a Project is `NetflixGPT`. You can checkout [repository](https://github.com/opdsbanasya/NetflixGPT)
+From Episode 14 to 16, I build a Project is `NetflixGPT`. You can checkout [**`repository`**](https://github.com/opdsbanasya/NetflixGPT)
 
 - In this project, I learned about the following topics:
 ## form validation

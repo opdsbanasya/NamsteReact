@@ -55,3 +55,4 @@ Here are all the topics that we will be covering in this series:
 - Jest
 - React Testing Library
 - Unit Testing & Integration Testing
+## **[Episode 14](https://github.com/opdsbanasya/NamsteReact/tree/main/Episode%2014-16)**: NetflixGPT

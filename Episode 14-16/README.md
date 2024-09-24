@@ -1,7 +1,6 @@
-# Project - NetflixGPT
-From Episode 14 to 16, I build a Project is `NetflixGPT`. You can checkout [**`repository`**](https://github.com/opdsbanasya/NetflixGPT)
+# [Project - NetflixGPT](https://github.com/opdsbanasya/NetflixGPT)
+From Episode 14 to 16, I build a Project is `NetflixGPT`. In this project, I learned about the following topics:
 
-- In this project, I learned about the following topics:
 ## form validation
 `Form validation` is the process of ensuring that user input is `clean`, `correct`, and `useful`. It is usually done by checking the input against a `set of rules`. If the input does not meet the rules, the form is considered `invalid` and the user is prompted to fix the errors. If you have a `large` form with many fields than you should consider using a form `validation library `like `Formik` or `React Hook Form`. But for small forms, you can use the `useRef` hook.
 

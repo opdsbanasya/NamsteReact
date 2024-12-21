@@ -1,17 +1,19 @@
 ### Why React?
-React is used to build user interfaces (`UI`) on the front end. React is a `JavaScript` library created by `Facebook`. It is used for building `reusable UI` components. React allows developers to create large web applications that can `change data`, without `reloading` the page. The main purpose of React is to be `fast`, `scalable`, and `simple`. It works only on user interfaces in the application. This corresponds to the view in the `Model–view–controller` (MVC) template. It can be used with a combination of other JavaScript libraries or frameworks, such as Angular JS in MVC.
+React is a `JavaScript` library created by `Facebook`. React is used to build user interfaces (`UI`) on the front end. It is used for building `reusable UI` components. React allows developers to create large web applications that can `change data`, without `reloading` the page. The main purpose of React is to be `fast`, `scalable`, and `simple`. It works only on user interfaces in the application. This corresponds to the view in the `Model–view–controller` (MVC) template. It can be used with a combination of other JavaScript libraries or frameworks, such as Angular JS in MVC.
 
 ### CDN
-`CDN` stands for `Content Delivery Network`. Yah ek network hota hai jo aapke website ke static files jaise CSS, JS, Images ko `store` karta hai. Jab koi user aapki website ko open karta hai to CDN us static files ko user ke `nearest server` se `load` karta hai. Isse aapki website ki speed `fast` hoti hai.```
+`CDN` stands for `Content Delivery Network`. Yah ek network hota hai jo aapke website ke static files jaise CSS, JS, Images ko `store` karta hai. Jab koi user aapki website ko open karta hai to CDN us static file ko user ke `nearest server` se `load` karta hai. Isse aapki website ki speed `fast` hoti hai.
 
-here are React CDN links:
+here are React CDN links for React and React DOM:
 ```html
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 ```
 
 ### Crossorigin attribute:
-The crossorigin attribute is a CORS (Cross-Origin Resource Sharing) setting that can be added to elements such as `<img>`, `<video>`, `<audio>`, `<link>`, `<script>`, and `<style>`. This attribute allows you to `configure` the CORS settings for those elements.
+The crossorigin attribute is a `CORS` (Cross-Origin Resource Sharing) setting that can be added to elements such as `<img>`, `<video>`, `<audio>`, `<link>`, `<script>`, and `<style>`. This attribute allows you to `configure` the CORS settings for those elements.
+#### CORS issue:
+There is a security feature in browsers called `Same-Origin Policy`. This policy prevents a web page from making AJAX requests to a different domain. If you try to make an AJAX request to a different domain, the browser will block the request. This is called a `CORS` (Cross-Origin Resource Sharing) issue.
 
 ### Library:
 - Library is a collection of functions and methods that allows you to perform many actions without writing your code.
@@ -46,6 +48,6 @@ const Parent = React.createElement("div", {id:"parent"}, [
     ]),
 ])
 ```
-- If we use createElement to build large code, it makes cery complex nested structure that not easy to read and understand. To solve this problem, we use `JSX`.
+- If we use createElement to build large code, it makes complex nested structure that not easy to read and understand. To solve this problem, we use `JSX`.
 - Make Sure the `react` and `react-dom` libraries `CDN` are included in the project.
 - `render()` method replaces the content of the `root` element with the new element.

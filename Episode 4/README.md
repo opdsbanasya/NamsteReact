@@ -13,6 +13,7 @@ Footer
     - SocialLinks
     - Contact
     - CopyRight
+```
 ### 📦 Props 
 - Props are used to **pass data from parent to child component**.
 - Can say props are **just arguments** to a function.

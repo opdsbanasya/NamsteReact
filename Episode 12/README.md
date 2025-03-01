@@ -1,6 +1,6 @@
 # Redux 
 - Redux is a `data management library` that can be used with any `UI library` or `framework`, including React.
-- ``Redux` & `React` are both different libraries, Redux is a `state management library`, while React is a `UI library`.
+- `Redux` & `React` are both different libraries, Redux is a `state management library`, while React is a `UI library`.
 - Other libraries like `Zustand`, `MobX`, `Recoil`, etc. can also be used for state management.
 ### need?
 - Redux is `not` mandatory for React. If you are building `small` or even `mid size` applications, you don't need Redux, but if you are building a `large application`, Where lot of `read` & `write` opearations done between components then you should consider using Redux.
@@ -225,6 +225,63 @@ Redux Toolkit say either mutable the existing state or return a new state `retur
 - _See the below image for better understanding of Redux DevTools._
 ![Redux DevTools](https://mini-rx.io/assets/images/redux-dev-tools-150200902ec356d9638e05206bbe31a7.gif)
 
-hw
-- onClick(fn) vs onClick(fn()) vs onClick={fn} vs onClick={() => fn()}
-- RTK Query
+## 1. Assignments
+### onClick(fn) vs onClick(fn()) vs onClick={fn} vs onClick={() => fn()}
+In React (or JavaScript in general), the way you pass a function to `onClick` determines when and how it gets executed. Let's break down the differences:
+
+### 1. `onClick(fn)`  
+🚨 **Incorrect in JSX**  
+```jsx
+<button onClick(alert("Clicked!"))>Click me</button>
+```
+- Here, `fn` (or `alert("Clicked!")` in this case) is **executed immediately** when the component renders.  
+- Since it doesn't return a function, `onClick` is set to `undefined`, and nothing happens on click.
+
+✅ **Correct in pure JavaScript (if inside `addEventListener`)**
+```js
+element.addEventListener("click", fn);
+```
+---
+
+### 2. `onClick(fn())`  
+🚨 **Incorrect in JSX**  
+```jsx
+<button onClick={alert("Clicked!")}>Click me</button>
+```
+- `fn()` **executes immediately** when the component renders.  
+- `onClick` is set to the return value of `fn()`, which is usually `undefined`, so nothing happens when clicking the button.
+
+✅ **Correct if `fn()` returns another function**
+```jsx
+<button onClick={fn()}>Click me</button> // If fn() returns a function
+```
+---
+
+### 3. `onClick={fn}`  
+✅ **Correct**  
+```jsx
+<button onClick={fn}>Click me</button>
+```
+- The function `fn` is passed as a **reference**.  
+- It only executes when the button is clicked.  
+- Recommended when `fn` doesn’t need arguments.
+
+---
+
+### 4. `onClick={() => fn()}`  
+✅ **Correct**  
+```jsx
+<button onClick={() => fn()}>Click me</button>
+```
+- The arrow function **creates a new function** that calls `fn()`.  
+- Useful if `fn` needs arguments:
+  ```jsx
+  <button onClick={() => fn("Hello")}>Click me</button>
+  ```
+- **Slight performance drawback**: A new function is created on every render, but it’s usually negligible.
+
+---
+
+### ✅ Best Practice
+- Use `onClick={fn}` if `fn` doesn’t require arguments.
+- Use `onClick={() => fn(args)}` if `fn` requires arguments.

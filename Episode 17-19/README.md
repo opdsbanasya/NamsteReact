@@ -162,6 +162,8 @@ const Component = () => {
 
 ### 🔄 API Polling
 UI requets to server, but data flow is one way server to client. After an interval, UI polling data, i.e. chech after an interval wheather new data coming or not, known as API Polling.
+- _See the image below:_
+    ![API Polling](./Webhook-vs-polling.webp)
 
 ### Example
 - Suppose you are developing a mail app. In this case, There is no need to quick response, if data is coming after 10 - 20 seconds, it is fine. There consider to use `API Polling` instead of `Web socket` becuase web socket connections are heavy.

@@ -1,0 +1,38 @@
+{
+  "name": "yt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opdsbanasya/OpTube.git"
+  },
+  "author": "dharm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/opdsbanasya/OpTube/issues"
+  },
+  "homepage": "https://github.com/opdsbanasya/OpTube#readme",
+  "description": "",
+  "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
+    "@reduxjs/toolkit": "^2.5.1",
+    "autoprefixer": "^10.4.20",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.4.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^6.29.0"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "parcel": "^2.12.0",
+    "postcss": "^8.5.3",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.17"
+  }
+}

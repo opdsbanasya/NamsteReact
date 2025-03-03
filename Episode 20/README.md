@@ -43,7 +43,7 @@ const App = () => {
   );
 };
 ```
-- You can see the [source code](./src/Components/Box.js)
+- _You can see the_ [source code](./src/Components/Box.js)
 
 ## 🧠 `useCallback`
 - Cache the function definition between re-renders same as `useMemo` but it is used for functions.
@@ -55,5 +55,31 @@ const cache = useCallback(() => {
 }, [dependencies]);
 ```
 
-## `useRef` 🔗
+## 🔗 `useRef` 
 - Lets you reference a value that not need to re-render.
+- **Syntax:**
+
+```js
+const ref = useRef(initialValue);
+```
+
+- **Example:**
+
+```js
+import React, { useRef } from "react";
+const App = () => {
+  const inputRef = useRef(null);
+  return (
+    <div>
+      <input ref={inputRef} type="text" />
+      <button onClick={() => inputRef.current.focus()}>Focus</button>
+    </div>
+  );
+};
+```
+- `useRef` does not give a single value, it gives an object with a `current` property that can be used to store the value.
+```js
+const ref = useRef(initialValue);
+console.log(ref.current); // initialValue
+```
+- _You can see the_ [source code](./src/Components/Box2.js).

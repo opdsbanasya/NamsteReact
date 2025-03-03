@@ -15,8 +15,8 @@ const Box = () => {
   const prime = useMemo(()=> findNthPrime(number), [number])
 
   return (
-    <div className='w-full h-full px-10'>
-        <div className={`w-96 h-96 border border-white rounded-lg px-10 py-5 space-y-5 ${toggleTheme && "bg-purple-700"}`}>
+    <div className='w-full px-10'>
+        <div className={`w-96 h-52 mb-5 border border-white rounded-lg px-10 py-5 space-y-5 ${toggleTheme && "bg-purple-700"}`}>
           <input type='number' value={number} className='outline-none border border-white bg-transparent p-2' 
           onChange={(e) => setNumber(e.target.value)}
           />
